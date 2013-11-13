@@ -1,5 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Tue Nov 12 15:37:23 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.223" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Wed Nov 13 13:53:23 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.229" showComponentDetails="false">
 <Global>
+<Metadata id="Metadata7">
+<Record fieldDelimiter="|" name="FEMAPublicAssistanceFundedProjectsDetail_Oct2013_Applicants" recordDelimiter="\r\n" type="delimited">
+<Field format="" label="Applicant ID" name="Applicant_ID" type="string"/>
+<Field format="" label="State" name="State" type="string"/>
+<Field format="" label="Applicant_Name" name="Applicant_Name" type="string"/>
+<Field format="" label="AddressLine1" name="AddressLine1" type="string"/>
+<Field format="" label="AddressLine2" name="AddressLine2" type="string"/>
+<Field format="" label="City_Name" name="City_Name" type="string"/>
+<Field format="" label="Zip" name="Zip" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata6" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="FEMAPublicAssistanceFundedProjectsDetail_Oct2013_PW" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
+<Field format="excel:0" label="Disaster Number" name="Disaster_Number" type="long"/>
+<Field format="excel:0" label="PW Number" name="PW_Number" type="long"/>
+<Field format="" label="Application Title" name="Application_Title" type="string"/>
+<Field format="" label="Applicant ID" name="Applicant_ID" type="string"/>
+<Field format="" label="Damage Category Code" name="Damage_Category_Code" type="string"/>
+<Field format="" label="Project Size" name="Project_Size" type="string"/>
+<Field format="" label="County" name="County" type="string"/>
+<Field format="excel:0" label="County Code" name="County_Code" type="long"/>
+<Field format="" label="State" name="State" type="string"/>
+<Field format="" label="State Code" name="State_Code" type="string"/>
+<Field format="excel:00" label="State Number Code" name="State_Number_Code" type="long"/>
+<Field format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" type="number"/>
+<Field format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" type="number"/>
+<Field format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" type="number"/>
+</Record>
+</Metadata>
 <Metadata id="Metadata0" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMAPublicAssistanceSubGrantee__Oct2013_PA_Applicant_Summary" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
 <Field label="Disaster Number" name="Disaster_Number" type="integer"/>
@@ -47,30 +76,30 @@
 </Metadata>
 <Metadata id="Metadata4">
 <Record fieldDelimiter="|" name="stormdata_full_stormdata_full" recordDelimiter="\r\n" type="delimited">
-<Field format="" label="BEGIN_YEARMONTH" name="BEGIN_YEARMONTH" type="long"/>
-<Field format="" label="BEGIN_DAY" name="BEGIN_DAY" type="long"/>
-<Field format="" label="BEGIN_TIME" name="BEGIN_TIME" type="long"/>
-<Field format="" label="END_YEARMONTH" name="END_YEARMONTH" type="long"/>
-<Field format="" label="END_DAY" name="END_DAY" type="long"/>
-<Field format="" label="END_TIME" name="END_TIME" type="long"/>
-<Field format="" label="EPISODE_ID" name="EPISODE_ID" type="long"/>
-<Field format="" label="EVENT_ID" name="EVENT_ID" type="long"/>
-<Field format="" label="STATE" name="STATE" type="string"/>
-<Field format="" label="STATE_FIPS" name="STATE_FIPS" type="long"/>
-<Field format="" label="YEAR" name="YEAR" type="long"/>
-<Field format="" label="MONTH_NAME" name="MONTH_NAME" type="string"/>
-<Field format="" label="EVENT_TYPE" name="EVENT_TYPE" type="string"/>
-<Field format="" label="CZ_TYPE" name="CZ_TYPE" type="string"/>
-<Field format="" label="CZ_FIPS" name="CZ_FIPS" type="long"/>
-<Field format="" label="CZ_NAME" name="CZ_NAME" type="string"/>
-<Field format="" label="WFO" name="WFO" type="string"/>
+<Field label="BEGIN_YEARMONTH" name="BEGIN_YEARMONTH" type="long"/>
+<Field label="BEGIN_DAY" name="BEGIN_DAY" type="long"/>
+<Field label="BEGIN_TIME" name="BEGIN_TIME" type="long"/>
+<Field label="END_YEARMONTH" name="END_YEARMONTH" type="long"/>
+<Field label="END_DAY" name="END_DAY" type="long"/>
+<Field label="END_TIME" name="END_TIME" type="long"/>
+<Field label="EPISODE_ID" name="EPISODE_ID" type="long"/>
+<Field label="EVENT_ID" name="EVENT_ID" type="long"/>
+<Field label="STATE" name="STATE" type="string"/>
+<Field label="STATE_FIPS" name="STATE_FIPS" type="long"/>
+<Field label="YEAR" name="YEAR" type="long"/>
+<Field label="MONTH_NAME" name="MONTH_NAME" type="string"/>
+<Field label="EVENT_TYPE" name="EVENT_TYPE" type="string"/>
+<Field label="CZ_TYPE" name="CZ_TYPE" type="string"/>
+<Field label="CZ_FIPS" name="CZ_FIPS" type="long"/>
+<Field label="CZ_NAME" name="CZ_NAME" type="string"/>
+<Field label="WFO" name="WFO" type="string"/>
 <Field format="excel:m/d/yy h:mm" label="BEGIN_DATE_TIME" name="BEGIN_DATE_TIME" type="date"/>
-<Field format="" label="CZ_TIMEZONE" name="CZ_TIMEZONE" type="string"/>
+<Field label="CZ_TIMEZONE" name="CZ_TIMEZONE" type="string"/>
 <Field format="excel:m/d/yy h:mm" label="END_DATE_TIME" name="END_DATE_TIME" type="date"/>
-<Field format="" label="INJURIES_DIRECT" name="INJURIES_DIRECT" type="long"/>
-<Field format="" label="INJURIES_INDIRECT" name="INJURIES_INDIRECT" type="long"/>
-<Field format="" label="DEATHS_DIRECT" name="DEATHS_DIRECT" type="long"/>
-<Field format="" label="DEATHS_INDIRECT" name="DEATHS_INDIRECT" type="long"/>
+<Field label="INJURIES_DIRECT" name="INJURIES_DIRECT" type="long"/>
+<Field label="INJURIES_INDIRECT" name="INJURIES_INDIRECT" type="long"/>
+<Field label="DEATHS_DIRECT" name="DEATHS_DIRECT" type="long"/>
+<Field label="DEATHS_INDIRECT" name="DEATHS_INDIRECT" type="long"/>
 <Field label="DAMAGE_PROPERTY" name="DAMAGE_PROPERTY" type="string"/>
 <Field label="DAMAGE_CROPS" name="DAMAGE_CROPS" type="string"/>
 <Field label="SOURCE" name="SOURCE" type="string"/>
@@ -96,7 +125,7 @@
 <Field label="END_LAT" name="END_LAT" type="string"/>
 <Field label="END_LON" name="END_LON" type="string"/>
 <Field label="EPISODE_TITLE" name="EPISODE_TITLE" type="string"/>
-<Field format="" label="EPISODE_NARRATIVE" name="EPISODE_NARRATIVE" type="string"/>
+<Field label="EPISODE_NARRATIVE" name="EPISODE_NARRATIVE" type="string"/>
 <Field label="EVENT_NARRATIVE" name="EVENT_NARRATIVE" type="string"/>
 <Field label="LAST_MOD_DATE" name="LAST_MOD_DATE" type="string"/>
 <Field label="LAST_MOD_TIME" name="LAST_MOD_TIME" type="string"/>
@@ -179,6 +208,32 @@
 <Dictionary/>
 </Global>
 <Phase number="0">
+<Node enabled="disabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="ApplicantIdTable" guiWidth="128" guiX="47" guiY="183" id="APPLICANT_ID_TABLE" sheet="Applicants" type="SPREADSHEET_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+    <globalAttributes>
+        <orientation>VERTICAL</orientation>
+        <step>1</step>
+        <writeHeader>true</writeHeader>
+    </globalAttributes>
+    <defaultSkip>1</defaultSkip>
+    <headerGroups>
+        <headerGroup skip="1">
+            <autoMappingType>NAME</autoMappingType>
+            <headerRanges>
+                <headerRange begin="B3"/>
+                <headerRange begin="C3"/>
+                <headerRange begin="D3"/>
+                <headerRange begin="E3"/>
+                <headerRange begin="F3"/>
+                <headerRange begin="G3"/>
+                <headerRange begin="H3"/>
+            </headerRanges>
+        </headerGroup>
+    </headerGroups>
+</mapping>
+]]></attr>
+</Node>
 <Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="disabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="627" guiY="0" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Disaster_Id" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
 <Node enabled="disabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data" guiWidth="128" guiX="47" guiY="0" id="FEMA_DATA" sheet="PA Applicant Summary,PA Applicant Summary(1),PA Applicant Summary(2)" skipRecords="0" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -208,7 +263,7 @@
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="disabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data 2" guiWidth="128" guiX="70" guiY="281" id="FEMA_DATA_2" sheet="PA Applicant Summary(1)" skipRecords="0" type="SPREADSHEET_READER">
+<Node enabled="disabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data 2" guiWidth="128" guiX="53" guiY="367" id="FEMA_DATA_2" sheet="PA Applicant Summary(1)" skipRecords="0" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -221,7 +276,68 @@
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="disabled" guiHeight="67" guiName="Merge" guiWidth="128" guiX="718" guiY="116" id="MERGE0" type="MERGE"/>
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="47" guiY="95" id="FEMA_DATA_DETAIL" sheet="PW,PW(1)" type="SPREADSHEET_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+    <globalAttributes>
+        <orientation>VERTICAL</orientation>
+        <step>1</step>
+        <writeHeader>true</writeHeader>
+    </globalAttributes>
+    <defaultSkip>1</defaultSkip>
+    <headerGroups>
+        <headerGroup skip="1">
+            <autoMappingType>ORDER</autoMappingType>
+            <headerRanges>
+                <headerRange begin="B2"/>
+                <headerRange begin="C2"/>
+                <headerRange begin="D2"/>
+                <headerRange begin="E2"/>
+                <headerRange begin="F2"/>
+                <headerRange begin="G2"/>
+                <headerRange begin="H2"/>
+                <headerRange begin="I2"/>
+                <headerRange begin="J2"/>
+                <headerRange begin="K2"/>
+                <headerRange begin="L2"/>
+                <headerRange begin="M2"/>
+                <headerRange begin="N2"/>
+                <headerRange begin="O2"/>
+            </headerRanges>
+        </headerGroup>
+    </headerGroups>
+</mapping>
+]]></attr>
+</Node>
+<Node enabled="disabled" guiHeight="67" guiName="LookupJoin" guiWidth="128" guiX="473" guiY="80" id="LOOKUP_JOIN0" joinKey="Applicant_ID" lookupTable="LookupTable0" type="LOOKUP_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+
+	return OK;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node enabled="disabled" guiHeight="67" guiName="Merge" guiWidth="128" guiX="348" guiY="381" id="MERGE0" type="MERGE"/>
 <Node enabled="disabled" guiHeight="67" guiName="Reformat" guiWidth="128" guiX="321" guiY="0" id="REFORMAT0" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 integer incrementor = 0;
@@ -252,7 +368,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="67" guiName="Reformat" guiWidth="128" guiX="288" guiY="116" id="REFORMAT1" type="REFORMAT">
+<Node enabled="disabled" guiHeight="67" guiName="Reformat" guiWidth="128" guiX="356" guiY="281" id="REFORMAT1" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
 integer incrementor=0;
@@ -285,11 +401,15 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/stormdata_full.xlsx" guiHeight="67" guiName="SpreadsheetDataReader" guiWidth="128" guiX="56" guiY="116" id="SPREADSHEET_READER0" type="SPREADSHEET_READER"/>
-<Node enabled="enabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="524" guiY="166" id="TRASH1" type="TRASH"/>
+<Node enabled="disabled" fileURL="${DATAIN_DIR}/stormdata_full.xlsx" guiHeight="67" guiName="SpreadsheetDataReader" guiWidth="128" guiX="78" guiY="265" id="SPREADSHEET_READER0" type="SPREADSHEET_READER"/>
+<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="652" guiY="95" id="TRASH0" type="TRASH"/>
+<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="793" guiY="14" id="TRASH1" type="TRASH"/>
+<Node enabled="enabled" guiHeight="72" guiName="Trash" guiWidth="128" guiX="558" guiY="171" id="TRASH2" type="TRASH"/>
+<Edge debugMode="true" fromNode="APPLICANT_ID_TABLE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 1 (in)" metadata="Metadata7" outPort="Port 0 (output)" toNode="TRASH2:1"/>
 <Edge debugMode="true" fromNode="FEMA_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (output)" toNode="REFORMAT0:0"/>
-<Edge debugMode="true" fromNode="REFORMAT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata3" outPort="Port 0 (out)" toNode="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0:0"/>
-<Edge debugMode="true" fromNode="REFORMAT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge6" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 0 (out)" toNode="TRASH1:0"/>
+<Edge debugMode="true" fromNode="FEMA_DATA_DETAIL:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata6" outPort="Port 0 (output)" toNode="TRASH2:0"/>
+<Edge fromNode="LOOKUP_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge4" inPort="Port 0 (in)" outPort="Port 0 (joined records)" toNode="LOOKUP_JOIN0:0"/>
+<Edge debugMode="true" fromNode="REFORMAT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata3" outPort="Port 0 (out)" toNode="TRASH1:0"/>
 <Edge debugMode="true" fromNode="SPREADSHEET_READER0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (output)" toNode="REFORMAT1:0"/>
 </Phase>
 </Graph>
