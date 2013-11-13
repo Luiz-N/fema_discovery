@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Wed Nov 13 14:32:36 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.238" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Wed Nov 13 14:55:46 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.241" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata8" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMADetailandApplicant" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
@@ -305,8 +305,8 @@
 </mapping>
 ]]></attr>
 </Node>
-<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="disabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="763" guiY="-34" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Disaster_Id" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
-<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="470" guiY="105" id="EXT_HASH_JOIN0" joinKey="$Applicant_ID=$Applicant_ID" type="EXT_HASH_JOIN">
+<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="disabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="926" guiY="359" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="PW_Number" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
+<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="282" guiY="130" id="EXT_HASH_JOIN0" joinKey="$Applicant_ID=$Applicant_ID" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -353,7 +353,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="692" guiY="202" id="EXT_HASH_JOIN1" joinKey="$Disaster_Number=$Disaster_Number" type="EXT_HASH_JOIN">
+<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="543" guiY="136" id="EXT_HASH_JOIN1" joinKey="$Disaster_Number=$Disaster_Number" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -402,7 +402,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data" guiWidth="128" guiX="532" guiY="345" id="FEMA_DATA" sheet="PA Applicant Summary,PA Applicant Summary(1),PA Applicant Summary(2)" skipRecords="0" type="SPREADSHEET_READER">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data" guiWidth="128" guiX="358" guiY="281" id="FEMA_DATA" sheet="PA Applicant Summary,PA Applicant Summary(1),PA Applicant Summary(2)" skipRecords="0" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -427,19 +427,6 @@ function integer transform() {
             </headerRanges>
         </headerGroup>
     </headerGroups>
-</mapping>
-]]></attr>
-</Node>
-<Node enabled="disabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data 2" guiWidth="128" guiX="50" guiY="351" id="FEMA_DATA_2" sheet="PA Applicant Summary(1)" skipRecords="0" type="SPREADSHEET_READER">
-<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<mapping>
-    <globalAttributes>
-        <orientation>VERTICAL</orientation>
-        <step>1</step>
-        <writeHeader>true</writeHeader>
-    </globalAttributes>
-    <defaultSkip>0</defaultSkip>
-    <headerGroups/>
 </mapping>
 ]]></attr>
 </Node>
@@ -476,7 +463,6 @@ function integer transform() {
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="disabled" guiHeight="67" guiName="Merge" guiWidth="128" guiX="345" guiY="365" id="MERGE0" type="MERGE"/>
 <Node enabled="disabled" guiHeight="67" guiName="Reformat" guiWidth="128" guiX="318" guiY="-16" id="REFORMAT0" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 integer incrementor = 0;
@@ -507,49 +493,14 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="disabled" guiHeight="67" guiName="Reformat" guiWidth="128" guiX="353" guiY="265" id="REFORMAT1" type="REFORMAT">
-<attr name="transform"><![CDATA[//#CTL2
-
-integer incrementor=0;
-
-// Transforms input record into output record.
-function integer transform() {
-	
-	$out.0.* = $in.0.*;
-	$out.0.STORM_INCIDENT_ID = incrementor++;
-
-	return OK;
-}
-
-// Called during component initialization.
-// function boolean init() {}
-
-// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
-// required by the transform. All resources allocated within this method should be released
-// by the postExecute() method.
-// function void preExecute() {}
-
-// Called only if transform() throws an exception.
-// function integer transformOnError(string errorMessage, string stackTrace) {}
-
-// Called during each graph run after the entire transform was executed. Should be used to free any resources
-// allocated within the preExecute() method.
-// function void postExecute() {}
-
-// Called to return a user-defined error message when an error occurs.
-// function string getMessage() {}
-]]></attr>
-</Node>
-<Node enabled="disabled" fileURL="${DATAIN_DIR}/stormdata_full.xlsx" guiHeight="67" guiName="SpreadsheetDataReader" guiWidth="128" guiX="75" guiY="249" id="SPREADSHEET_READER0" type="SPREADSHEET_READER"/>
 <Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="917" guiY="64" id="TRASH0" type="TRASH"/>
 <Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="579" guiY="-16" id="TRASH1" type="TRASH"/>
-<Node enabled="enabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="917" guiY="207" id="TRASH2" type="TRASH"/>
+<Node enabled="enabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="860" guiY="257" id="TRASH2" type="TRASH"/>
 <Edge debugMode="true" fromNode="APPLICANT_ID_TABLE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 1 (slave)" metadata="Metadata7" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN0:1"/>
 <Edge debugMode="true" fromNode="EXT_HASH_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge8" inPort="Port 0 (driver)" metadata="Metadata9" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN1:0"/>
 <Edge debugMode="true" fromNode="EXT_HASH_JOIN1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge9" inPort="Port 0 (in)" metadata="Metadata10" outPort="Port 0 (out)" toNode="TRASH2:0"/>
 <Edge debugMode="true" fromNode="FEMA_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 1 (slave)" metadata="Metadata2" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN1:1"/>
 <Edge debugMode="true" fromNode="FEMA_DATA_DETAIL:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (driver)" metadata="Metadata6" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN0:0"/>
 <Edge debugMode="true" fromNode="REFORMAT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata3" outPort="Port 0 (out)" toNode="TRASH1:0"/>
-<Edge debugMode="true" fromNode="SPREADSHEET_READER0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (output)" toNode="REFORMAT1:0"/>
 </Phase>
 </Graph>
