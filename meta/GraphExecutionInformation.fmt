@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="," name="GraphExecutionInformation" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" type="delimited">
+<Field name="Path" type="string"/>
+<Field name="Arguments" type="string"/>
+</Record>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="|" name="SurveyResponse" previewAttachment="${DATAIN_DIR}/SurveyResponses.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" skipSourceRows="1" type="delimited">
+<Field name="SalesOrderNumber" type="string"/>
+<Field name="SurveyResponse" type="string"/>
+</Record>

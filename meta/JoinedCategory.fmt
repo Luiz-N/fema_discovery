@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="," name="JoinedCategory" previewAttachment="${DATAIN_DIR}/ProductSubcategory.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" skipSourceRows="0" type="delimited">
+<Field name="ProductSubcategoryKey" type="string"/>
+<Field name="ProductSubcategoryAlternateKey" type="string"/>
+<Field name="ProductSubcategoryName" type="string"/>
+<Field name="ProductCategoryKey" type="string"/>
+<Field name="ProductCategoryAlternateKey" type="string"/>
+<Field name="ProductCategoryName" type="string"/>
+</Record>

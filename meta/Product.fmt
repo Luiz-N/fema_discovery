@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="," name="Product" previewAttachment="${DATAIN_DIR}/DimProduct.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" skipSourceRows="1" type="delimited">
+<Field name="ProductKey" type="integer"/>
+<Field name="ProductAlternateKey" type="string"/>
+<Field name="ProductSubcategoryKey" type="string"/>
+<Field name="WeightUnitMeasureCode" type="string"/>
+<Field name="SizeUnitMeasureCode" type="string"/>
+<Field name="EnglishProductName" type="string"/>
+<Field name="StandardCost" type="number"/>
+<Field name="FinishedGoodsFlag" type="string"/>
+<Field name="Color" type="string"/>
+<Field name="SafetyStockLevel" type="string"/>
+<Field name="ReorderPoint" type="string"/>
+<Field name="ListPrice" type="number"/>
+<Field name="Size" type="string"/>
+<Field name="SizeRange" type="string"/>
+<Field name="Weight" type="string"/>
+<Field name="DaysToManufacture" type="string"/>
+<Field name="ProductLine" type="string"/>
+<Field name="DealerPrice" type="number"/>
+<Field name="Class" type="string"/>
+<Field name="Style" type="string"/>
+<Field name="ModelName" type="string"/>
+<Field name="EnglishDescription" type="string"/>
+<Field name="StartDate" type="string"/>
+<Field name="EndDate" type="string"/>
+<Field name="Status" type="string"/>
+</Record>

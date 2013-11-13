@@ -1,0 +1,6 @@
+Path,Arguments
+./graph/InitDataDomain.grf,
+./graph/ResetDataDomain.grf,
+./graph/LoadConfiguration.grf,
+./graph/LoadData.grf,
+./graph/LoadViewDefinitions.grf,

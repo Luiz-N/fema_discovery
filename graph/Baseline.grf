@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Tue May 31 11:55:56 EDT 2011" guiVersion="3.3.0.P" id="1306871483270" licenseType="Commercial" modified="Tue Mar 05 09:12:02 CST 2013" modifiedBy="Administrator" name="Baseline" revision="1.117" showComponentDetails="false">
+<Global>
+<Metadata fileURL="${META_DIR}/GraphExecutionInformation.fmt" id="Metadata0"/>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="225" backgroundColorR="225" folded="false" height="268" id="Note1" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="Create New Baseline Index from Data and Configuration" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="554" x="37" y="39">
+<attr name="text"><![CDATA[
+This graph executes a number of steps to create a populated and fully configured data domain. Each step is contained in a separate sub-graph. Data and configuration in an existing data domain, if any, are fully replaced.
+
+Here's what will be executed:
+1) Initialize Data Domain - Provision a new data domain, if necessary.
+2) Reset Data Domain - Clear all data, schema and config from the data domain.
+3) Load Configuration - Load general configuration into the data domain.
+4) Load Data - Load initial data into the data domain.
+5) Load View Definition - Load predefined views that are responsible for powering the chart components]]></attr>
+</Note>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" fileURL="${CONFIGIN_DIR}/BaselineSteps.csv" guiHeight="65" guiName="List Steps" guiWidth="128" guiX="139" guiY="221" id="DATA_READER0" skipRows="0" skipSourceRows="1" type="DATA_READER"/>
+<Node enabled="enabled" guiHeight="65" guiName="Run Steps" guiWidth="128" guiX="320" guiY="221" id="RUN_GRAPH1" type="RUN_GRAPH"/>
+<Edge fromNode="DATA_READER0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in regular mode: names of the graphs to be executed, otherwise nothing)" metadata="Metadata0" outPort="Port 0 (output)" toNode="RUN_GRAPH1:0"/>
+</Phase>
+</Graph>

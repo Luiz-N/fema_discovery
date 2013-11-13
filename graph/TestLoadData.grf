@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="dbrock" created="Fri Sep 27 14:02:33 CDT 2013" guiVersion="3.3.0.P" id="1380308936669" licenseType="Commercial" modified="Tue Oct 29 14:17:21 CDT 2013" modifiedBy="dbrock" name="TestLoadData" revision="1.1" showComponentDetails="true">
+<Global>
+<Connection dbConfig="${PROJECT}/conn/MyOracleDatabase.cfg" id="JDBC0" type="JDBC"/>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node dbConnection="JDBC0" enabled="enabled" guiHeight="72" guiName="DBInputTable" guiWidth="128" guiX="83" guiY="170" id="DB_INPUT_TABLE0" type="DB_INPUT_TABLE"/>
+</Phase>
+</Graph>

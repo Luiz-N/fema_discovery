@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><Record fieldDelimiter="," name="DimDate" previewAttachment="${DATAIN_DIR}/DimDate.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" recordSize="-1" skipSourceRows="0" type="delimited">
+<Field eofAsDelimiter="false" name="DimDate_DateKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" format="MM/dd/yyyy HH:mm" name="DimDate_FullDateAlternateKey" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" name="DimDate_DayNumberOfWeek" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimDate_DayNameOfWeek" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimDate_DayNumberOfMonth" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimDate_DayNumberOfYear" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimDate_WeekNumberOfYear" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimDate_MonthName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimDate_MonthNumberOfYear" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimDate_CalendarQuarter" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimDate_CalendarYear" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimDate_CalendarSemester" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimDate_FiscalQuarter" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimDate_FiscalYear" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimDate_FiscalSemester" nullable="true" shift="0" size="0" type="integer"/>
+</Record>

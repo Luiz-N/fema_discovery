@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="ejitomirsky" created="Thu Oct 06 11:23:35 EDT 2011" guiVersion="3.3.0.P" id="1317915999906" licenseType="Commercial" modified="Tue Feb 26 10:36:59 CST 2013" modifiedBy="Administrator" name="LoadViewDefinitions" revision="1.524" showComponentDetails="true">
+<Global>
+<Metadata fileURL="${META_DIR}/ViewXmlStream.fmt" id="Metadata11"/>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="181" backgroundColorG="245" backgroundColorR="245" folded="false" height="173" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="Load View Definitions" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="690" x="14" y="12">
+<attr name="text"><![CDATA[This graph loads predefined views that are responsible for powering the chart components.]]></attr>
+</Note>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiHeight="65" guiName="Load Views in Data Domain" guiWidth="181" guiX="472" guiY="64" id="LOAD_VIEWS_IN_DATA_DOMAIN1" namespaceBindings="0=http://www.endeca.com/endeca-server/sconfig/2/0&#10;incl=http://www.w3.org/2004/08/xop/include&#10;XMLS=http://www.w3.org/2001/XMLSchema" operationName="{http://www.endeca.com/endeca-server/sconfig/2}SConfig#SConfigPort#putEntities" type="WEB_SERVICE_CLIENT" wsdlURL="http://${ENDECA_SERVER_HOST}:${ENDECA_SERVER_PORT}/${ENDECA_SERVER_CONTEXT}/ws/sconfig/${DATA_DOMAIN_NAME}?wsdl">
+<attr name="requestStructure"><![CDATA[<ns:putEntities xmlns:ns="http://www.endeca.com/endeca-server/sconfig/2/0">
+$xmlString
+</ns:putEntities>]]></attr>
+<attr name="responseMapping"><![CDATA[<Mappings>
+	<Mapping element="0:putEntitiesResponse" outPort="0">
+		<FieldMapping inputField="xmlString" outputField="xmlString" />
+		<Mapping element="0:entityAdditionInformation">
+		</Mapping>
+	</Mapping>
+	<Mapping element="{http://www.endeca.com/endeca-server/sconfig/1/0}putEntitiesResponse">
+		<Mapping element="{http://www.endeca.com/endeca-server/sconfig/1/0}entityAdditionInformation" outPort="0">
+		</Mapping>
+	</Mapping>
+</Mappings>
+]]></attr>
+</Node>
+<Node enabled="enabled" guiHeight="65" guiName="Prepare View Stream" guiWidth="149" guiX="250" guiY="64" id="PREPARE_VIEW_STREAM" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	integer Header = indexOf($0.xmlString,"<ns2:semanticEntity");
+	integer Start =  indexOf($0.xmlString,"<ns2:semanticEntity key=\"Base\" displayName=\"Base\" isActive=\"true\">");
+	string Left = substring($0.xmlString,Header,(Start-Header));
+
+	string Right = substring($0.xmlString,Start,(length($0.xmlString) - Start)); 
+	integer End =   indexOf(Right,"</ns2:semanticEntity>");
+	integer Footer = indexOf(Right,"</ns2:listEntitiesResponse>");
+	string Final = substring(Right,(End + 17),(Footer-(End+17)));
+	                   
+	string xmlString = concat(Left,Final);
+	
+	xmlString = replace(xmlString, '[\n]',' ');
+	xmlString  = replace(xmlString,'[\s]+',' ');
+	$out.0.xmlString  = replace(xmlString,'ns2:','ns:');
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node enabled="enabled" fileURL="${CONFIGIN_DIR}/view_config.xml" guiHeight="87" guiName="Read View Definitions" guiWidth="151" guiX="24" guiY="64" id="READ_VIEW_DEFINITIONS" type="DATA_READER"/>
+<Edge debugMode="false" fromNode="PREPARE_VIEW_STREAM:0" guiBendpoints="" guiRouter="Manhattan" id="Edge6" inPort="Port 0 (request)" metadata="Metadata11" outPort="Port 0 (out)" toNode="LOAD_VIEWS_IN_DATA_DOMAIN1:0"/>
+<Edge debugMode="false" fromNode="READ_VIEW_DEFINITIONS:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata11" outPort="Port 0 (output)" toNode="PREPARE_VIEW_STREAM:0"/>
+</Phase>
+</Graph>

@@ -1,0 +1,8 @@
+Profile,SelectType,RankingType,ShowRecordCounts,IsValueSearchable,IsRecordSearchable,SnippetSize,IsUnique,IsSingleAssign,IsDimension
+Dimension,multi-or,record-count,TRUE,TRUE,TRUE,0,FALSE,FALSE,TRUE
+Metric,single,lexical,FALSE,FALSE,FALSE,0,FALSE,FALSE,FALSE
+Detail,single,lexical,FALSE,FALSE,TRUE,0,FALSE,FALSE,FALSE
+Text,single,lexical,FALSE,FALSE,TRUE,0,FALSE,FALSE,FALSE
+RecSpec,single,lexical,FALSE,FALSE,TRUE,0,TRUE,TRUE,FALSE
+NavMetric,multi-or,record-count,TRUE,FALSE,FALSE,0,FALSE,FALSE,TRUE
+DimensionAND,multi-and,record-count,TRUE,TRUE,TRUE,0,FALSE,FALSE,TRUE

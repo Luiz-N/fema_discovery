@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="dbrock" created="Tue Oct 29 12:26:52 CDT 2013" guiVersion="3.3.0.P" id="1383069851101" licenseType="Commercial" modified="Tue Oct 29 14:17:21 CDT 2013" modifiedBy="dbrock" name="TestLoadData2" revision="1.4" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata0" previewAttachment="${DATAIN_DIR}/DimProduct.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="DimProduct.csv" name="DimProduct_csv" previewAttachment="${DATAIN_DIR}/DimProduct.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="both" quotedStrings="false" recordDelimiter="\r\n" skipSourceRows="1" type="delimited">
+<Field name="ProductKey" type="string"/>
+<Field name="ProductAlternateKey" type="string"/>
+<Field name="ProductSubcategoryKey" type="string"/>
+<Field name="WeightUnitMeasureCode" type="string"/>
+<Field name="SizeUnitMeasureCode" type="string"/>
+<Field name="EnglishProductName" type="string"/>
+<Field name="StandardCost" type="string"/>
+<Field name="FinishedGoodsFlag" type="string"/>
+<Field name="Color" type="string"/>
+<Field name="SafetyStockLevel" type="string"/>
+<Field name="ReorderPoint" type="string"/>
+<Field name="ListPrice" type="string"/>
+<Field name="Size" type="string"/>
+<Field name="SizeRange" type="string"/>
+<Field name="Weight" type="string"/>
+<Field name="DaysToManufacture" type="string"/>
+<Field name="ProductLine" type="string"/>
+<Field name="DealerPrice" type="string"/>
+<Field name="Class" type="string"/>
+<Field name="Style" type="string"/>
+<Field name="ModelName" type="string"/>
+<Field name="EnglishDescription" type="string"/>
+<Field name="StartDate" type="string"/>
+<Field name="EndDate" type="string"/>
+<Field eofAsDelimiter="false" name="Status" type="string"/>
+</Record>
+</Metadata>
+<Connection dbConfig="${PROJECT}/conn/MyOracleDatabase.cfg" id="JDBC0" type="JDBC"/>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/DimProduct.csv" guiHeight="106" guiName="UniversalDataReader" guiWidth="177" guiX="78" guiY="174" id="DATA_READER0" type="DATA_READER"/>
+<Node enabled="enabled" guiHeight="72" guiName="DBInputTable" guiWidth="128" guiX="78" guiY="351" id="DB_INPUT_TABLE0" type="DB_INPUT_TABLE"/>
+<Node enabled="enabled" guiHeight="72" guiName="Trash" guiWidth="128" guiX="450" guiY="174" id="TRASH0" type="TRASH"/>
+<Edge fromNode="DATA_READER0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (output)" toNode="TRASH0:0"/>
+</Phase>
+</Graph>

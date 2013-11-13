@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record name="viewXmlStream" previewAttachmentCharset="ISO-8859-1" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="true" name="xmlString" nullable="true" shift="0" size="0" type="string"/>
+</Record>

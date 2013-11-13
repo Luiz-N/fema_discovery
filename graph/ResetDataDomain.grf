@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="mhanselman" created="Mon Sep 12 15:04:46 EDT 2011" guiVersion="3.3.0" id="1315855214302" licenseType="Commercial" modified="Tue Feb 12 16:23:16 EST 2013" modifiedBy="cmbrady" name="ResetDataDomain" revision="1.18" showComponentDetails="true">
+<Global>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="enabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="69" guiName="Reset Data Domain" guiWidth="168" guiX="41" guiY="44" id="ENDECA_RESET_DATA_DOMAIN0" sslEnabled="false" type="ENDECA_RESET_DATA_DOMAIN"/>
+</Phase>
+</Graph>

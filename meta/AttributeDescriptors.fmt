@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="," name="AttributeDescriptors" previewAttachment="${PROJECT}/data-in/config/AttributeMetadata.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" skipSourceRows="1" type="delimited">
+<Field name="Key" type="string"/>
+<Field name="DisplayName" type="string"/>
+<Field name="SelectType" type="string"/>
+<Field name="SortOrder" type="string"/>
+</Record>

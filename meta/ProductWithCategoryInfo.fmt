@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="|" id="Metadata7" name="ProductEnglish" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" recordSize="-1" skipSourceRows="1" type="delimited">
+<Field eofAsDelimiter="false" name="ProductKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="ProductAlternateKey" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ProductSubcategoryKey" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="WeightUnitMeasureCode" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="SizeUnitMeasureCode" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ProductName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="StandardCost" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="FinishedGoodsFlag" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Color" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="SafetyStockLevel" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ReorderPoint" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ListPrice" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="Size" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="SizeRange" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Weight" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DaysToManufacture" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ProductLine" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DealerPrice" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="Class" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Style" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ModelName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Description" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="StartDate" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="EndDate" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Status" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ProductSubcategoryAlternateKey" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ProductSubcategoryName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ProductCategoryKey" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ProductCategoryAlternateKey" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ProductCategoryName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="ProductCategory" nullable="true" shift="0" size="0" type="string"/>
+</Record>

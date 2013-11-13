@@ -1,0 +1,5 @@
+Format,AvailableAggregations,DefaultAggregation,Description,FormatSettings
+No_Comma_Int,"COUNT,COUNTDISTINCT",,,"{""type"":""NUMBER"",""@class"":""com.endeca.portal.format.NumberFormatter"",""decimalPlacesMode"":""CUSTOM"",""decimalPlaces"":0,""includeGroupingSeparator"":""NO""}"
+Currency,"SUM,AVG,MEDIAN,MIN,MAX,VARIANCE,STDDEV",SUM,,"{""type"":""CURRENCY"",""@class"":""com.endeca.portal.format.NumberFormatter"",""currencySymbol"":""$""}"
+Percentage,"SUM,AVG,MEDIAN,MIN,MAX,VARIANCE,STDDEV",SUM,,"{""type"":""PERCENTAGE"",""@class"":""com.endeca.portal.format.NumberFormatter""}"
+Count_Only,"COUNT,COUNTDISTINCT",,,

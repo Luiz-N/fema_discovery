@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="," name="dimreseller" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="false" name="DimReseller_ResellerKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimReseller_GeographyKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimReseller_ResellerAlternateKey" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimReseller_Phone" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimReseller_BusinessType" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimReseller_ResellerName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimReseller_NumberEmployees" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimReseller_OrderFrequency" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimReseller_OrderMonth" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimReseller_FirstOrderYear" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimReseller_LastOrderYear" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimReseller_ProductLine" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimReseller_AddressLineOne" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimReseller_AddressLineTwo" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimReseller_AnnualSales" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="DimReseller_BankName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimReseller_MinPaymentType" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimReseller_MinPaymentAmount" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="DimReseller_AnnualRevenue" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="DimReseller_YearOpened" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimGeography_GeographyKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimGeography_City" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_StateProvinceCode" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_StateProvinceName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_CountryRegionCode" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_CountryRegionName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_PostalCode" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_SalesTerritoryKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" mdexType="mdex:geocode" name="DimGeography_LatLong" nullable="true" shift="0" size="0" type="string"/>
+</Record>

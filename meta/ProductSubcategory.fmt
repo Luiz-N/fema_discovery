@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="," name="ProductSubcategory" previewAttachment="${DATAIN_DIR}/DimProductSubCategory.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" skipSourceRows="1" type="delimited">
+<Field name="ProductSubcategoryKey" type="string"/>
+<Field name="ProductSubcategoryAlternateKey" type="string"/>
+<Field name="EnglishProductSubcategoryName" type="string"/>
+<Field name="ProductCategoryKey" type="string"/>
+</Record>

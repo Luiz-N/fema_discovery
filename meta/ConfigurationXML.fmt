@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="," name="ConfigurationXML" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" type="delimited">
+<Field name="xmlString" type="string"/>
+<Field name="singleAggregationKey" type="integer"/>
+</Record>

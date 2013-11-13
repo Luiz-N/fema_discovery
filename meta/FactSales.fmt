@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="," name="FactSales" previewAttachment="${DATAIN_DIR}/FactSales.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="false" name="FactSales_ProductKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_OrderDateKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_DueDateKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_ShipDateKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_ResellerKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_EmployeeKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_PromotionKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_CurrencyKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_SalesTerritoryKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_SalesOrderNumber" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="FactSales_SalesOrderLineNumber" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_RevisionNumber" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_OrderQuantity" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="FactSales_UnitPrice" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="FactSales_ExtendedAmount" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="FactSales_UnitPriceDiscountPct" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="FactSales_DiscountAmount" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="FactSales_ProductStandardCost" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="FactSales_TotalProductCost" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="FactSales_SalesAmount" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="FactSales_TaxAmt" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="FactSales_Freight" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="FactSales_CarrierTrackingNumber" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="FactSales_CustomerPONumer" nullable="true" shift="0" size="0" type="string"/>
+</Record>

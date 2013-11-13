@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><Record fieldDelimiter="," name="AttributeSearchability" previewAttachment="${CONFIGIN_DIR}/AttributeSearchability.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" skipSourceRows="1" type="delimited">
+<Field name="InterfaceName" type="string"/>
+<Field name="AttributeName" type="string"/>
+<Field name="Language" type="string"/>
+</Record>

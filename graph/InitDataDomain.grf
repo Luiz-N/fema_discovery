@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="Administrator" created="Tue Mar 06 10:57:13 GMT+08:00 2012" guiVersion="3.3.0" id="1331002769234" licenseType="Commercial" modified="Tue Feb 12 16:19:16 EST 2013" modifiedBy="cmbrady" name="InitDataDomain" revision="1.190" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata2" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="Fault" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
+<Field name="reason" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata1" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="IsEnabled" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
+<Field name="enabled" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="225" backgroundColorR="225" folded="false" height="367" id="Note2" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="Create New Data Domain" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="733" x="15" y="11">
+<attr name="text"><![CDATA[This graph creates a new data domain, if necessary. It first retrieves the state of the named data domain on the Endeca Server's host and port. If the data domain is enabled, nothing happens; if the data domain is disabled, then it will be enabled; if it does not exist, then it will create a new data domain.]]></attr>
+</Note>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiHeight="72" guiName="Check Response State" guiWidth="191" guiX="275" guiY="119" id="CHECK_RESPONSE_STATE1" partitionKey="enabled" ranges="&lt;true,true&gt;;&lt;false,false&gt;;" type="PARTITION"/>
+<Node enabled="enabled" guiHeight="69" guiName="Create Data Domain" guiWidth="175" guiX="543" guiY="259" id="CREATE_DATA_DOMAIN" namespaceBindings="0=http://www.endeca.com/endeca-server/manage/1/0&#10;XMLS=http://www.w3.org/2001/XMLSchema&#10;incl=http://www.w3.org/2004/08/xop/include" operationName="{http://www.endeca.com/endeca-server/manage/1}manage#managePort#createDataDomain" type="WEB_SERVICE_CLIENT" wsdlURL="http://${ENDECA_SERVER_HOST}:${ENDECA_SERVER_PORT}/${ENDECA_SERVER_CONTEXT}/ws/manage?wsdl">
+<attr name="faultMapping"><![CDATA[<Mappings>
+		<Mapping element="faultstring" outPort="1"/>
+</Mappings>]]></attr>
+<attr name="requestStructure"><![CDATA[<ns:createDataDomain xmlns:ns="http://www.endeca.com/endeca-server/manage/1/0">
+  <ns:name>${DATA_DOMAIN_NAME}</ns:name>
+  <ns:ddProfileName>default</ns:ddProfileName>
+  <ns:enabled>true</ns:enabled>
+</ns:createDataDomain>
+]]></attr>
+<attr name="responseMapping"><![CDATA[<Mappings>
+	<Mapping element="0:createDataDomainResponse">
+	</Mapping>
+</Mappings>
+]]></attr>
+</Node>
+<Node enabled="enabled" guiHeight="69" guiName="Data Domain Does Not Exist" guiWidth="232" guiX="289" guiY="259" id="DATA_DOMAIN_DOES_NOT_EXIST" partitionKey="reason" ranges="&lt;OES-000095: No such data domain: ${DATA_DOMAIN_NAME},OES-000095: No such data domain: ${DATA_DOMAIN_NAME}&gt;;" type="PARTITION"/>
+<Node enabled="enabled" guiHeight="69" guiName="Enable Data Domain" guiWidth="175" guiX="543" guiY="169" id="ENABLE_DATA_DOMAIN" namespaceBindings="0=http://www.endeca.com/endeca-server/manage/1/0&#10;XMLS=http://www.w3.org/2001/XMLSchema&#10;incl=http://www.w3.org/2004/08/xop/include" operationName="{http://www.endeca.com/endeca-server/manage/1}manage#managePort#enableDataDomain" type="WEB_SERVICE_CLIENT" wsdlURL="http://${ENDECA_SERVER_HOST}:${ENDECA_SERVER_PORT}/${ENDECA_SERVER_CONTEXT}/ws/manage?wsdl">
+<attr name="requestStructure"><![CDATA[<ns:enableDataDomain xmlns:ns="http://www.endeca.com/endeca-server/manage/1/0">
+  <ns:name>${DATA_DOMAIN_NAME}</ns:name>
+</ns:enableDataDomain>
+]]></attr>
+</Node>
+<Node enabled="enabled" guiHeight="72" guiName="Get Data Domain Status" guiWidth="203" guiX="48" guiY="187" id="GET_DATA_DOMAIN_STATUS" namespaceBindings="0=http://www.endeca.com/endeca-server/manage/1/0&#10;XMLS=http://www.w3.org/2001/XMLSchema&#10;incl=http://www.w3.org/2004/08/xop/include" operationName="{http://www.endeca.com/endeca-server/manage/1}manage#managePort#getDataDomain" type="WEB_SERVICE_CLIENT" wsdlURL="http://${ENDECA_SERVER_HOST}:${ENDECA_SERVER_PORT}/${ENDECA_SERVER_CONTEXT}/ws/manage?wsdl">
+<attr name="faultMapping"><![CDATA[<Mappings>
+	<Mapping element="0:manageFault">
+		<Mapping element="0:reason" outPort="1">
+		</Mapping>
+	</Mapping>
+</Mappings>
+]]></attr>
+<attr name="requestStructure"><![CDATA[<ns:getDataDomain xmlns:ns="http://www.endeca.com/endeca-server/manage/1/0">
+  <ns:name>${DATA_DOMAIN_NAME}</ns:name>
+</ns:getDataDomain>
+
+]]></attr>
+<attr name="responseMapping"><![CDATA[<Mappings>
+	<Mapping element="0:getDataDomainResponse">
+		<Mapping element="0:dataDomainDetail">
+			<Mapping element="{http://www.endeca.com/endeca-server/types/1/0}enabled" outPort="0">
+			</Mapping>
+		</Mapping>
+	</Mapping>
+</Mappings>
+]]></attr>
+</Node>
+<Node enabled="enabled" guiHeight="69" guiName="Trash" guiWidth="128" guiX="543" guiY="78" id="TRASH3" type="TRASH"/>
+<Edge debugMode="false" fromNode="CHECK_RESPONSE_STATE1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="TRASH3:0"/>
+<Edge debugMode="false" fromNode="CHECK_RESPONSE_STATE1:1" guiBendpoints="" guiRouter="Manhattan" id="Edge14" inPort="Port 0 (request)" metadata="Metadata1" outPort="Port 1 (out)" toNode="ENABLE_DATA_DOMAIN:0"/>
+<Edge debugMode="false" fromNode="DATA_DOMAIN_DOES_NOT_EXIST:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (request)" metadata="Metadata2" outPort="Port 0 (out)" toNode="CREATE_DATA_DOMAIN:0"/>
+<Edge debugMode="false" fromNode="GET_DATA_DOMAIN_STATUS:0" guiBendpoints="" guiRouter="Manhattan" id="Edge10" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (response)" toNode="CHECK_RESPONSE_STATE1:0"/>
+<Edge debugMode="false" fromNode="GET_DATA_DOMAIN_STATUS:1" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 1 (response)" toNode="DATA_DOMAIN_DOES_NOT_EXIST:0"/>
+</Phase>
+</Graph>

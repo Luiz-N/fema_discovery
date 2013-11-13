@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="," name="DimSalesTerritory" previewAttachment="${DATAIN_DIR}/DimSalesTerritory.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="false" name="DimSalesTerritory_SalesTerritoryKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimSalesTerritory_SalesTerritoryRegion" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimSalesTerritory_SalesTerritoryCountry" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimSalesTerritory_SalesTerritoryGroup" nullable="true" shift="0" size="0" type="string"/>
+</Record>

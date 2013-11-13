@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Record fieldDelimiter="," name="DimGeography" previewAttachment="${DATAIN_DIR}/DimGeography.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="false" name="DimGeography_GeographyKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimGeography_City" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_StateProvinceCode" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_StateProvinceName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_CountryRegionCode" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_CountryRegionName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_PostalCode" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimGeography_SalesTerritoryKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" mdexType="mdex:geocode" name="DimGeography_LatLong" nullable="true" shift="0" size="0" type="string"/>
+</Record>

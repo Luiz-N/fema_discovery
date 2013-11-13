@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><Record fieldDelimiter="," name="DimEmployee" previewAttachment="${DATAIN_DIR}/DimEmployee.csv" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n\\|\n" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="false" name="DimEmployee_EmployeeKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimEmployee_EmployeeNationalIDAlternateKey" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimEmployee_SalesTerritoryKey" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimEmployee_FirstName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimEmployee_LastName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimEmployee_MiddleName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimEmployee_Title" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="MM/dd/yyyy HH:mm" name="DimEmployee_HireDate" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" format="MM/dd/yyyy HH:mm" name="DimEmployee_BirthDate" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" name="DimEmployee_EmailAddress" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimEmployee_Phone" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimEmployee_MaritalStatus" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimEmployee_SalariedFlag" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimEmployee_Gender" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="DimEmployee_BaseRate" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" name="DimEmployee_CurrentFlag" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimEmployee_SalesPersonFlag" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="DimEmployee_DepartmentName" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="MM/dd/yyyy HH:mm" name="DimEmployee_StartDate" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" format="MM/dd/yyyy HH:mm" name="DimEmployee_EndDate" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" name="DimEmployee_Status" nullable="true" shift="0" size="0" type="string"/>
+</Record>
