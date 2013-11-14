@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Thu Nov 14 15:21:21 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.263" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Thu Nov 14 15:50:02 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.269" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata8" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMADetailandApplicant" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
@@ -733,7 +733,12 @@ function integer transform() {
 	$out.0.LAST_CERT = $in.0.LAST_CERT;
 	$out.0.ADDCORR_FLG = $in.0.ADDCORR_FLG;
 	$out.0.ADDCORR_DATE = $in.0.ADDCORR_DATE;
-	$out.0.State_County_Code = ($out.0.STATE_FIPS * 1000) + $out.0.CZ_FIPS;
+	if($in.0.STATE_FIPS == null ||  $in.0.CZ_FIPS == null) {
+	  printErr("UNEXPECTED NULLS AT" + $in.0.EVENT_ID);
+	}
+	else {
+	  $out.0.State_County_Code = ($in.0.STATE_FIPS * 1000) + $in.0.CZ_FIPS;
+	}
 	return OK;
 }
 
@@ -757,7 +762,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="disabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="977" guiY="278" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Disaster_Id" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
+<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="enabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="915" guiY="557" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Disaster_Id" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
 <Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="215" guiY="130" id="EXT_HASH_JOIN0" joinKey="$Applicant_ID=$Applicant_ID" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 integer incrementor = 0;
@@ -913,7 +918,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="72" guiName="ExtMergeJoin" guiWidth="128" guiX="855" guiY="445" id="EXT_MERGE_JOIN0" joinKey="$Incident_Start_Date(a);$State_County_Code(a)#$BEGIN_DATE_TIME(a);$State_County_Code(a);" type="EXT_MERGE_JOIN">
+<Node enabled="enabled" guiHeight="72" guiName="ExtMergeJoin" guiWidth="128" guiX="834" guiY="437" id="EXT_MERGE_JOIN0" joinKey="$Incident_Start_Date(a);$State_County_Code(a)#$BEGIN_DATE_TIME(a);$State_County_Code(a);" type="EXT_MERGE_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -1056,7 +1061,7 @@ function integer transform() {
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="42" guiY="79" id="FEMA_DATA_DETAIL" numRecords="100" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="42" guiY="79" id="FEMA_DATA_DETAIL" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -1149,15 +1154,9 @@ function decimal convert(string raw_string){
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/stormdata_full.xlsx" guiHeight="67" guiName="raw_weather" guiWidth="128" guiX="30" guiY="465" id="RAW_WEATHER" numRecords="100" type="SPREADSHEET_READER"/>
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/stormdata_full.xlsx" guiHeight="67" guiName="raw_weather" guiWidth="128" guiX="30" guiY="465" id="RAW_WEATHER" type="SPREADSHEET_READER"/>
 <Node enabled="enabled" guiHeight="67" guiName="Reformat" guiWidth="128" guiX="430" guiY="361" id="REFORMAT0" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
-
-//function date createDate(string dateString) {
-//  string[] dateArray = split(dateString,'/');
-//  string newDateString = dateArray[2] + '-' + dateArray[0] + '-' + dateArray[1];
-//  return str2date(newDateString);
-//}
 
 // Transforms input record into output record.
 function integer transform() {
@@ -1190,7 +1189,7 @@ function integer transform() {
 ]]></attr>
 </Node>
 <Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="855" guiY="185" id="TRASH2" type="TRASH"/>
-<Node enabled="enabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="914" guiY="565" id="TRASH3" type="TRASH"/>
+<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="691" guiY="185" id="TRASH3" type="TRASH"/>
 <Node enabled="enabled" guiHeight="67" guiName="trim and lowercase" guiWidth="128" guiX="175" guiY="565" id="TRIM_AND_LOWERCASE" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
@@ -1203,10 +1202,10 @@ function integer transform() {
 		string lower = lowerCase($in.0.STATE);
 		$out.0.STATE = lower;
 	}
-	
+
 	if($in.0.MONTH_NAME != null){
-		string trimmed = trim($in.0.STATE);
-		string lower = lowerCase($in.0.STATE);
+		string trimmed = trim($in.0.MONTH_NAME);
+		string lower = lowerCase($in.0.MONTH_NAME);
 		$out.0.MONTH_NAME = lower;
 	}
 	
@@ -1241,13 +1240,13 @@ function integer transform() {
 <Edge debugMode="false" fromNode="COUNTY_FIXER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge10" inPort="Port 0 (in)" metadata="Metadata14" outPort="Port 0 (out)" toNode="EXT_SORT1:0"/>
 <Edge debugMode="false" fromNode="EXT_HASH_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge8" inPort="Port 0 (driver)" metadata="Metadata9" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN1:0"/>
 <Edge debugMode="false" fromNode="EXT_HASH_JOIN1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge9" inPort="Port 0 (driver)" metadata="Metadata10" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN2:0"/>
-<Edge debugMode="true" fromNode="EXT_HASH_JOIN2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in)" metadata="Metadata12" outPort="Port 0 (out)" toNode="EXT_SORT0:0"/>
-<Edge fromNode="EXT_MERGE_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge15" inPort="Port 0 (in)" metadata="Metadata17" outPort="Port 0 (out)" toNode="TRASH3:0"/>
-<Edge fromNode="EXT_SORT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (driver)" metadata="Metadata12" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN0:0"/>
-<Edge fromNode="EXT_SORT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 1 (slave)" metadata="Metadata14" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN0:1"/>
+<Edge debugMode="false" fromNode="EXT_HASH_JOIN2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in)" metadata="Metadata12" outPort="Port 0 (out)" toNode="EXT_SORT0:0"/>
+<Edge debugMode="true" fromNode="EXT_MERGE_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge15" inPort="Port 0 (in)" metadata="Metadata17" outPort="Port 0 (out)" toNode="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0:0"/>
+<Edge debugMode="true" fromNode="EXT_SORT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (driver)" metadata="Metadata12" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN0:0"/>
+<Edge debugMode="true" fromNode="EXT_SORT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 1 (slave)" metadata="Metadata14" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN0:1"/>
 <Edge debugMode="false" fromNode="FEMA_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 1 (slave)" metadata="Metadata2" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN1:1"/>
 <Edge debugMode="false" fromNode="FEMA_DATA_DETAIL:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (driver)" metadata="Metadata6" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN0:0"/>
-<Edge debugMode="true" fromNode="INCIDENT_DATES_SCRAPE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge4" inPort="Port 0 (in)" metadata="Metadata18" outPort="Port 0 (output)" toNode="REFORMAT0:0"/>
+<Edge debugMode="false" fromNode="INCIDENT_DATES_SCRAPE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge4" inPort="Port 0 (in)" metadata="Metadata18" outPort="Port 0 (output)" toNode="REFORMAT0:0"/>
 <Edge debugMode="false" fromNode="PRICE_FIXER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 0 (in)" metadata="Metadata13" outPort="Port 0 (out)" toNode="COUNTY_FIXER:0"/>
 <Edge debugMode="false" fromNode="RAW_WEATHER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (output)" toNode="TRIM_AND_LOWERCASE:0"/>
 <Edge fromNode="REFORMAT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge16" inPort="Port 1 (slave)" metadata="Metadata11" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN2:1"/>

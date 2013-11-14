@@ -3,5 +3,4 @@ Path,Arguments
 ./graph/ResetDataDomain.grf,
 ./graph/LoadConfiguration.grf,
 ./graph/LoadData-FEMA.grf,
-./graph/WeatherData.grf,
 ./graph/LoadViewDefinitions.grf,
