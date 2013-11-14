@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Wed Nov 13 15:39:58 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.245" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Thu Nov 14 13:00:34 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.248" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata8" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMADetailandApplicant" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
-<Field format="" label="Applicant_Name" name="Applicant_Name" type="string"/>
-<Field format="" label="AddressLine1" name="AddressLine1" type="string"/>
-<Field format="" label="AddressLine2" name="AddressLine2" type="string"/>
-<Field format="" label="City_Name" name="City_Name" type="string"/>
-<Field format="" label="Zip" name="Zip" type="string"/>
+<Field label="Applicant_Name" name="Applicant_Name" type="string"/>
+<Field label="AddressLine1" name="AddressLine1" type="string"/>
+<Field label="AddressLine2" name="AddressLine2" type="string"/>
+<Field label="City_Name" name="City_Name" type="string"/>
+<Field label="Zip" name="Zip" type="string"/>
 <Field format="excel:0" label="Disaster Number" name="Disaster_Number" type="long"/>
 <Field format="excel:0" label="PW Number" name="PW_Number" type="long"/>
-<Field format="" label="Application Title" name="Application_Title" type="string"/>
-<Field format="" label="Applicant ID" name="Applicant_ID" type="string"/>
-<Field format="" label="Damage Category Code" name="Damage_Category_Code" type="string"/>
-<Field format="" label="Project Size" name="Project_Size" type="string"/>
-<Field format="" label="County" name="County" type="string"/>
+<Field label="Application Title" name="Application_Title" type="string"/>
+<Field label="Applicant ID" name="Applicant_ID" type="string"/>
+<Field label="Damage Category Code" name="Damage_Category_Code" type="string"/>
+<Field label="Project Size" name="Project_Size" type="string"/>
+<Field label="County" name="County" type="string"/>
 <Field format="excel:0" label="County Code" name="County_Code" type="long"/>
-<Field format="" label="State" name="State" type="string"/>
-<Field format="" label="State Code" name="State_Code" type="string"/>
+<Field label="State" name="State" type="string"/>
+<Field label="State Code" name="State_Code" type="string"/>
 <Field format="excel:00" label="State Number Code" name="State_Number_Code" type="long"/>
 <Field format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" type="number"/>
 <Field format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" type="number"/>
@@ -25,27 +25,27 @@
 </Metadata>
 <Metadata id="Metadata7">
 <Record fieldDelimiter="|" name="FEMAPublicAssistanceFundedProjectsDetail_Oct2013_Applicants" recordDelimiter="\r\n" type="delimited">
-<Field format="" label="Applicant ID" name="Applicant_ID" type="string"/>
-<Field format="" label="State" name="State" type="string"/>
-<Field format="" label="Applicant_Name" name="Applicant_Name" type="string"/>
-<Field format="" label="AddressLine1" name="AddressLine1" type="string"/>
-<Field format="" label="AddressLine2" name="AddressLine2" type="string"/>
-<Field format="" label="City_Name" name="City_Name" type="string"/>
-<Field format="" label="Zip" name="Zip" type="string"/>
+<Field label="Applicant ID" name="Applicant_ID" type="string"/>
+<Field label="State" name="State" type="string"/>
+<Field label="Applicant_Name" name="Applicant_Name" type="string"/>
+<Field label="AddressLine1" name="AddressLine1" type="string"/>
+<Field label="AddressLine2" name="AddressLine2" type="string"/>
+<Field label="City_Name" name="City_Name" type="string"/>
+<Field label="Zip" name="Zip" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata6" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMAPublicAssistanceFundedProjectsDetail_Oct2013_PW" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
 <Field format="excel:0" label="Disaster Number" name="Disaster_Number" type="long"/>
 <Field format="excel:0" label="PW Number" name="PW_Number" type="long"/>
-<Field format="" label="Application Title" name="Application_Title" type="string"/>
-<Field format="" label="Applicant ID" name="Applicant_ID" type="string"/>
-<Field format="" label="Damage Category Code" name="Damage_Category_Code" type="string"/>
-<Field format="" label="Project Size" name="Project_Size" type="string"/>
-<Field format="" label="County" name="County" type="string"/>
+<Field label="Application Title" name="Application_Title" type="string"/>
+<Field label="Applicant ID" name="Applicant_ID" type="string"/>
+<Field label="Damage Category Code" name="Damage_Category_Code" type="string"/>
+<Field label="Project Size" name="Project_Size" type="string"/>
+<Field label="County" name="County" type="string"/>
 <Field format="excel:0" label="County Code" name="County_Code" type="long"/>
-<Field format="" label="State" name="State" type="string"/>
-<Field format="" label="State Code" name="State_Code" type="string"/>
+<Field label="State" name="State" type="string"/>
+<Field label="State Code" name="State_Code" type="string"/>
 <Field format="excel:00" label="State Number Code" name="State_Number_Code" type="long"/>
 <Field format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" type="number"/>
 <Field format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" type="number"/>
@@ -99,21 +99,21 @@
 </Metadata>
 <Metadata id="Metadata10" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMASumandDetail" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
-<Field format="" label="Applicant_Name" name="Applicant_Name" type="string"/>
-<Field format="" label="AddressLine1" name="AddressLine1" type="string"/>
-<Field format="" label="AddressLine2" name="AddressLine2" type="string"/>
-<Field format="" label="City_Name" name="City_Name" type="string"/>
-<Field format="" label="Zip" name="Zip" type="string"/>
+<Field label="Applicant_Name" name="Applicant_Name" type="string"/>
+<Field label="AddressLine1" name="AddressLine1" type="string"/>
+<Field label="AddressLine2" name="AddressLine2" type="string"/>
+<Field label="City_Name" name="City_Name" type="string"/>
+<Field label="Zip" name="Zip" type="string"/>
 <Field format="excel:0" label="Disaster Number" name="Disaster_Number" type="long"/>
 <Field format="excel:0" label="PW Number" name="PW_Number" type="long"/>
-<Field format="" label="Application Title" name="Application_Title" type="string"/>
-<Field format="" label="Applicant ID" name="Applicant_ID" type="string"/>
-<Field format="" label="Damage Category Code" name="Damage_Category_Code" type="string"/>
-<Field format="" label="Project Size" name="Project_Size" type="string"/>
-<Field format="" label="County" name="County" type="string"/>
+<Field label="Application Title" name="Application_Title" type="string"/>
+<Field label="Applicant ID" name="Applicant_ID" type="string"/>
+<Field label="Damage Category Code" name="Damage_Category_Code" type="string"/>
+<Field label="Project Size" name="Project_Size" type="string"/>
+<Field label="County" name="County" type="string"/>
 <Field format="excel:0" label="County Code" name="County_Code" type="long"/>
-<Field format="" label="State" name="State" type="string"/>
-<Field format="" label="State Code" name="State_Code" type="string"/>
+<Field label="State" name="State" type="string"/>
+<Field label="State Code" name="State_Code" type="string"/>
 <Field format="excel:00" label="State Number Code" name="State_Number_Code" type="long"/>
 <Field format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" type="number"/>
 <Field format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" type="number"/>
@@ -121,25 +121,26 @@
 <Field label="Declaration Date" name="Declaration_Date" type="date"/>
 <Field label="Incident Type" name="Incident_Type" type="string"/>
 <Field name="Disaster_Id" type="integer"/>
+<Field name="State_County_Code" type="long"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata9" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="recordName1" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
-<Field format="" label="Applicant_Name" name="Applicant_Name" type="string"/>
-<Field format="" label="AddressLine1" name="AddressLine1" type="string"/>
-<Field format="" label="AddressLine2" name="AddressLine2" type="string"/>
-<Field format="" label="City_Name" name="City_Name" type="string"/>
-<Field format="" label="Zip" name="Zip" type="string"/>
+<Field label="Applicant_Name" name="Applicant_Name" type="string"/>
+<Field label="AddressLine1" name="AddressLine1" type="string"/>
+<Field label="AddressLine2" name="AddressLine2" type="string"/>
+<Field label="City_Name" name="City_Name" type="string"/>
+<Field label="Zip" name="Zip" type="string"/>
 <Field format="excel:0" label="Disaster Number" name="Disaster_Number" type="long"/>
 <Field format="excel:0" label="PW Number" name="PW_Number" type="long"/>
-<Field format="" label="Application Title" name="Application_Title" type="string"/>
-<Field format="" label="Applicant ID" name="Applicant_ID" type="string"/>
-<Field format="" label="Damage Category Code" name="Damage_Category_Code" type="string"/>
-<Field format="" label="Project Size" name="Project_Size" type="string"/>
-<Field format="" label="County" name="County" type="string"/>
+<Field label="Application Title" name="Application_Title" type="string"/>
+<Field label="Applicant ID" name="Applicant_ID" type="string"/>
+<Field label="Damage Category Code" name="Damage_Category_Code" type="string"/>
+<Field label="Project Size" name="Project_Size" type="string"/>
+<Field label="County" name="County" type="string"/>
 <Field format="excel:0" label="County Code" name="County_Code" type="long"/>
-<Field format="" label="State" name="State" type="string"/>
-<Field format="" label="State Code" name="State_Code" type="string"/>
+<Field label="State" name="State" type="string"/>
+<Field label="State Code" name="State_Code" type="string"/>
 <Field format="excel:00" label="State Number Code" name="State_Number_Code" type="long"/>
 <Field format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" type="number"/>
 <Field format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" type="number"/>
@@ -307,7 +308,7 @@
 </mapping>
 ]]></attr>
 </Node>
-<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="enabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="865" guiY="329" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Disaster_Id" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
+<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="disabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="790" guiY="101" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Disaster_Id" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
 <Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="282" guiY="130" id="EXT_HASH_JOIN0" joinKey="$Applicant_ID=$Applicant_ID" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 integer incrementor = 0;
@@ -357,7 +358,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="596" guiY="272" id="EXT_HASH_JOIN1" joinKey="$Disaster_Number=$Disaster_Number" type="EXT_HASH_JOIN">
+<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="494" guiY="247" id="EXT_HASH_JOIN1" joinKey="$Disaster_Number=$Disaster_Number" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -384,6 +385,7 @@ function integer transform() {
 	$out.0.Declaration_Date = $in.1.Declaration_Date;
 	$out.0.Incident_Type = $in.1.Incident_Type;
 	$out.0.Disaster_Id = $in.0.Disaster_Id;
+	$out.0.State_County_Code = ($in.0.State_Number_Code*1000) + $in.0.County_Code;
 
 	return OK;
 }
@@ -407,7 +409,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data" guiWidth="128" guiX="331" guiY="335" id="FEMA_DATA" sheet="PA Applicant Summary,PA Applicant Summary(1),PA Applicant Summary(2)" skipRecords="0" type="SPREADSHEET_READER">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data" guiWidth="128" guiX="235" guiY="318" id="FEMA_DATA" sheet="PA Applicant Summary,PA Applicant Summary(1),PA Applicant Summary(2)" skipRecords="0" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -435,7 +437,7 @@ function integer transform() {
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="44" guiY="79" id="FEMA_DATA_DETAIL" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="44" guiY="79" id="FEMA_DATA_DETAIL" numRecords="100" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -498,12 +500,12 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="917" guiY="64" id="TRASH0" type="TRASH"/>
+<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="909" guiY="-7" id="TRASH0" type="TRASH"/>
 <Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="579" guiY="-16" id="TRASH1" type="TRASH"/>
-<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="836" guiY="201" id="TRASH2" type="TRASH"/>
+<Node enabled="enabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="893" guiY="318" id="TRASH2" type="TRASH"/>
 <Edge debugMode="true" fromNode="APPLICANT_ID_TABLE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 1 (slave)" metadata="Metadata7" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN0:1"/>
 <Edge debugMode="true" fromNode="EXT_HASH_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge8" inPort="Port 0 (driver)" metadata="Metadata9" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN1:0"/>
-<Edge debugMode="true" fromNode="EXT_HASH_JOIN1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge9" inPort="Port 0 (in)" metadata="Metadata10" outPort="Port 0 (out)" toNode="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0:0"/>
+<Edge debugMode="true" fromNode="EXT_HASH_JOIN1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge9" inPort="Port 0 (in)" metadata="Metadata10" outPort="Port 0 (out)" toNode="TRASH2:0"/>
 <Edge debugMode="true" fromNode="FEMA_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 1 (slave)" metadata="Metadata2" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN1:1"/>
 <Edge debugMode="true" fromNode="FEMA_DATA_DETAIL:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (driver)" metadata="Metadata6" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN0:0"/>
 <Edge debugMode="true" fromNode="REFORMAT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata3" outPort="Port 0 (out)" toNode="TRASH1:0"/>
