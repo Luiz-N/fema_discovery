@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Fri Nov 15 14:28:44 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.282" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Fri Nov 15 15:43:56 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.288" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata8" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMADetailandApplicant" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
@@ -274,7 +274,8 @@
 <Field label="LAST_CERT" name="LAST_CERT" type="string"/>
 <Field label="ADDCORR_FLG" name="ADDCORR_FLG" type="string"/>
 <Field label="ADDCORR_DATE" name="ADDCORR_DATE" type="string"/>
-<Field mdexType="mdex:geocode" name="Geocode" type="string"/>
+<Field name="Geocode" type="string"/>
+<Field name="Identifier" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata18" previewAttachment="${DATAIN_DIR}/incident_dates.csv" previewAttachmentCharset="ISO-8859-1">
@@ -446,7 +447,7 @@
 <Field label="ADDCORR_FLG" name="ADDCORR_FLG" type="string"/>
 <Field label="ADDCORR_DATE" name="ADDCORR_DATE" type="string"/>
 <Field delimiter="|" name="State_County_Code" type="long"/>
-<Field mdexType="mdex:geocode" name="Geocode" type="string"/>
+<Field name="Geocode" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata13" previewAttachmentCharset="ISO-8859-1">
@@ -829,7 +830,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="enabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="914" guiY="557" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Disaster_Id" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
+<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="enabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="914" guiY="557" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Identifier" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
 <Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="215" guiY="130" id="EXT_HASH_JOIN0" joinKey="$Applicant_ID=$Applicant_ID" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 integer incrementor = 0;
@@ -985,7 +986,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="72" guiName="ExtMergeJoin" guiWidth="128" guiX="841" guiY="438" id="EXT_MERGE_JOIN0" joinKey="$Incident_Start_Date(a);$State_Number_Code(a)#$BEGIN_DATE_TIME(a);$STATE_FIPS(a);" joinType="leftOuter" type="EXT_MERGE_JOIN">
+<Node enabled="enabled" guiHeight="72" guiName="ExtMergeJoin" guiWidth="128" guiX="841" guiY="438" id="EXT_MERGE_JOIN0" joinKey="$Incident_Start_Date(a);$State_Number_Code(a)#$BEGIN_DATE_TIME(a);$STATE_FIPS(a);" joinType="fullOuter" type="EXT_MERGE_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -1076,6 +1077,13 @@ function integer transform() {
 	$out.0.ADDCORR_FLG = $in.1.ADDCORR_FLG;
 	$out.0.ADDCORR_DATE = $in.1.ADDCORR_DATE;
 	$out.0.Geocode = $in.1.Geocode;
+	
+	if($in.0.Disaster_Id != null) {
+	  $out.0.Identifier = num2str($in.0.Disaster_Id);
+	}
+	else {
+	  $out.0.Identifier = 'E' + num2str($in.1.EVENT_ID);
+	}
 
 	return OK;
 }
@@ -1162,7 +1170,7 @@ function integer transform() {
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="67" guiName="Geolocate" guiWidth="128" guiX="600" guiY="491" id="GEOLOCATE" type="REFORMAT">
+<Node enabled="enabled" guiHeight="67" guiName="Geolocate" guiWidth="128" guiX="584" guiY="452" id="GEOLOCATE" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
