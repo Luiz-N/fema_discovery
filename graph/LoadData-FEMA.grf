@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Thu Nov 14 16:22:49 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.272" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Fri Nov 15 15:43:56 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.288" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata8" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMADetailandApplicant" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
@@ -274,6 +274,8 @@
 <Field label="LAST_CERT" name="LAST_CERT" type="string"/>
 <Field label="ADDCORR_FLG" name="ADDCORR_FLG" type="string"/>
 <Field label="ADDCORR_DATE" name="ADDCORR_DATE" type="string"/>
+<Field name="Geocode" type="string"/>
+<Field name="Identifier" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata18" previewAttachment="${DATAIN_DIR}/incident_dates.csv" previewAttachmentCharset="ISO-8859-1">
@@ -380,6 +382,72 @@
 <Field label="ADDCORR_FLG" name="ADDCORR_FLG" type="string"/>
 <Field label="ADDCORR_DATE" name="ADDCORR_DATE" type="string"/>
 <Field delimiter="|" name="State_County_Code" type="long"/>
+<Field mdexType="mdex:geocode" name="Geocode" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata19" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="stormdata_county_codes" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
+<Field label="BEGIN_YEARMONTH" name="BEGIN_YEARMONTH" type="long"/>
+<Field label="BEGIN_DAY" name="BEGIN_DAY" type="long"/>
+<Field label="BEGIN_TIME" name="BEGIN_TIME" type="long"/>
+<Field label="END_YEARMONTH" name="END_YEARMONTH" type="long"/>
+<Field label="END_DAY" name="END_DAY" type="long"/>
+<Field label="END_TIME" name="END_TIME" type="long"/>
+<Field label="EPISODE_ID" name="EPISODE_ID" type="long"/>
+<Field label="EVENT_ID" name="EVENT_ID" type="long"/>
+<Field label="STATE" name="STATE" type="string"/>
+<Field label="STATE_FIPS" name="STATE_FIPS" type="long"/>
+<Field label="YEAR" name="YEAR" type="long"/>
+<Field label="MONTH_NAME" name="MONTH_NAME" type="string"/>
+<Field label="EVENT_TYPE" name="EVENT_TYPE" type="string"/>
+<Field label="CZ_TYPE" name="CZ_TYPE" type="string"/>
+<Field label="CZ_FIPS" name="CZ_FIPS" type="long"/>
+<Field label="CZ_NAME" name="CZ_NAME" type="string"/>
+<Field label="WFO" name="WFO" type="string"/>
+<Field format="yyyy-MM-dd" label="BEGIN_DATE_TIME" name="BEGIN_DATE_TIME" type="date"/>
+<Field label="CZ_TIMEZONE" name="CZ_TIMEZONE" type="string"/>
+<Field format="excel:m/d/yy h:mm" label="END_DATE_TIME" name="END_DATE_TIME" type="date"/>
+<Field label="INJURIES_DIRECT" name="INJURIES_DIRECT" type="long"/>
+<Field label="INJURIES_INDIRECT" name="INJURIES_INDIRECT" type="long"/>
+<Field label="DEATHS_DIRECT" name="DEATHS_DIRECT" type="long"/>
+<Field label="DEATHS_INDIRECT" name="DEATHS_INDIRECT" type="long"/>
+<Field label="DAMAGE_PROPERTY" name="DAMAGE_PROPERTY" type="decimal"/>
+<Field label="DAMAGE_CROPS" name="DAMAGE_CROPS" type="decimal"/>
+<Field label="SOURCE" name="SOURCE" type="string"/>
+<Field label="MAGNITUDE" name="MAGNITUDE" type="string"/>
+<Field label="MAGNITUDE_TYPE" name="MAGNITUDE_TYPE" type="string"/>
+<Field label="FLOOD_CAUSE" name="FLOOD_CAUSE" type="string"/>
+<Field label="CATEGORY" name="CATEGORY" type="string"/>
+<Field label="TOR_F_SCALE" name="TOR_F_SCALE" type="string"/>
+<Field label="TOR_LENGTH" name="TOR_LENGTH" type="string"/>
+<Field label="TOR_WIDTH" name="TOR_WIDTH" type="string"/>
+<Field label="TOR_OTHER_WFO" name="TOR_OTHER_WFO" type="string"/>
+<Field label="TOR_OTHER_CZ_STATE" name="TOR_OTHER_CZ_STATE" type="string"/>
+<Field label="TOR_OTHER_CZ_FIPS" name="TOR_OTHER_CZ_FIPS" type="string"/>
+<Field label="TOR_OTHER_CZ_NAME" name="TOR_OTHER_CZ_NAME" type="string"/>
+<Field label="BEGIN_RANGE" name="BEGIN_RANGE" type="string"/>
+<Field label="BEGIN_AZIMUTH" name="BEGIN_AZIMUTH" type="string"/>
+<Field label="BEGIN_LOCATION" name="BEGIN_LOCATION" type="string"/>
+<Field label="END_RANGE" name="END_RANGE" type="string"/>
+<Field label="END_AZIMUTH" name="END_AZIMUTH" type="string"/>
+<Field label="END_LOCATION" name="END_LOCATION" type="string"/>
+<Field label="BEGIN_LAT" name="BEGIN_LAT" type="string"/>
+<Field label="BEGIN_LON" name="BEGIN_LON" type="string"/>
+<Field label="END_LAT" name="END_LAT" type="string"/>
+<Field label="END_LON" name="END_LON" type="string"/>
+<Field label="EPISODE_TITLE" name="EPISODE_TITLE" type="string"/>
+<Field label="EPISODE_NARRATIVE" name="EPISODE_NARRATIVE" type="string"/>
+<Field label="EVENT_NARRATIVE" name="EVENT_NARRATIVE" type="string"/>
+<Field label="LAST_MOD_DATE" name="LAST_MOD_DATE" type="string"/>
+<Field label="LAST_MOD_TIME" name="LAST_MOD_TIME" type="string"/>
+<Field label="LAST_CERT_DATE" name="LAST_CERT_DATE" type="string"/>
+<Field label="LAST_CERT_TIME" name="LAST_CERT_TIME" type="string"/>
+<Field label="LAST_MOD" name="LAST_MOD" type="string"/>
+<Field label="LAST_CERT" name="LAST_CERT" type="string"/>
+<Field label="ADDCORR_FLG" name="ADDCORR_FLG" type="string"/>
+<Field label="ADDCORR_DATE" name="ADDCORR_DATE" type="string"/>
+<Field delimiter="|" name="State_County_Code" type="long"/>
+<Field name="Geocode" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata13" previewAttachmentCharset="ISO-8859-1">
@@ -669,7 +737,7 @@
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="67" guiName="county_fixer" guiWidth="128" guiX="476" guiY="557" id="COUNTY_FIXER" type="REFORMAT">
+<Node enabled="enabled" guiHeight="67" guiName="county_fixer" guiWidth="128" guiX="424" guiY="579" id="COUNTY_FIXER" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -762,7 +830,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="disabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="760" guiY="599" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Disaster_Id" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
+<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="enabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="914" guiY="557" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Identifier" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
 <Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="215" guiY="130" id="EXT_HASH_JOIN0" joinKey="$Applicant_ID=$Applicant_ID" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 integer incrementor = 0;
@@ -918,7 +986,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="72" guiName="ExtMergeJoin" guiWidth="128" guiX="834" guiY="437" id="EXT_MERGE_JOIN0" joinKey="$Incident_Start_Date(a);$State_County_Code(a)#$BEGIN_DATE_TIME(a);$State_County_Code(a);" type="EXT_MERGE_JOIN">
+<Node enabled="enabled" guiHeight="72" guiName="ExtMergeJoin" guiWidth="128" guiX="841" guiY="438" id="EXT_MERGE_JOIN0" joinKey="$Incident_Start_Date(a);$State_Number_Code(a)#$BEGIN_DATE_TIME(a);$STATE_FIPS(a);" joinType="fullOuter" type="EXT_MERGE_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -1008,6 +1076,14 @@ function integer transform() {
 	$out.0.LAST_CERT = $in.1.LAST_CERT;
 	$out.0.ADDCORR_FLG = $in.1.ADDCORR_FLG;
 	$out.0.ADDCORR_DATE = $in.1.ADDCORR_DATE;
+	$out.0.Geocode = $in.1.Geocode;
+	
+	if($in.0.Disaster_Id != null) {
+	  $out.0.Identifier = num2str($in.0.Disaster_Id);
+	}
+	else {
+	  $out.0.Identifier = 'E' + num2str($in.1.EVENT_ID);
+	}
 
 	return OK;
 }
@@ -1032,7 +1108,7 @@ function integer transform() {
 ]]></attr>
 </Node>
 <Node enabled="enabled" guiHeight="67" guiName="ExtSort" guiWidth="128" guiX="760" guiY="323" id="EXT_SORT0" sortKey="Incident_Start_Date(a);State_County_Code(a)" type="EXT_SORT"/>
-<Node enabled="enabled" guiHeight="67" guiName="ExtSort" guiWidth="128" guiX="684" guiY="508" id="EXT_SORT1" sortKey="BEGIN_DATE_TIME(a);State_County_Code(a)" type="EXT_SORT"/>
+<Node enabled="enabled" guiHeight="67" guiName="ExtSort" guiWidth="128" guiX="746" guiY="579" id="EXT_SORT1" sortKey="BEGIN_DATE_TIME(a);State_County_Code(a)" type="EXT_SORT"/>
 <Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data" guiWidth="128" guiX="121" guiY="265" id="FEMA_DATA" sheet="PA Applicant Summary,PA Applicant Summary(1),PA Applicant Summary(2)" skipRecords="0" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
@@ -1061,7 +1137,7 @@ function integer transform() {
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="42" guiY="79" id="FEMA_DATA_DETAIL" numRecords="1000" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="42" guiY="79" id="FEMA_DATA_DETAIL" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -1092,6 +1168,98 @@ function integer transform() {
         </headerGroup>
     </headerGroups>
 </mapping>
+]]></attr>
+</Node>
+<Node enabled="enabled" guiHeight="67" guiName="Geolocate" guiWidth="128" guiX="584" guiY="452" id="GEOLOCATE" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.BEGIN_YEARMONTH = $in.0.BEGIN_YEARMONTH;
+	$out.0.BEGIN_DAY = $in.0.BEGIN_DAY;
+	$out.0.BEGIN_TIME = $in.0.BEGIN_TIME;
+	$out.0.END_YEARMONTH = $in.0.END_YEARMONTH;
+	$out.0.END_DAY = $in.0.END_DAY;
+	$out.0.END_TIME = $in.0.END_TIME;
+	$out.0.EPISODE_ID = $in.0.EPISODE_ID;
+	$out.0.EVENT_ID = $in.0.EVENT_ID;
+	$out.0.STATE = $in.0.STATE;
+	$out.0.STATE_FIPS = $in.0.STATE_FIPS;
+	$out.0.YEAR = $in.0.YEAR;
+	$out.0.MONTH_NAME = $in.0.MONTH_NAME;
+	$out.0.EVENT_TYPE = $in.0.EVENT_TYPE;
+	$out.0.CZ_TYPE = $in.0.CZ_TYPE;
+	$out.0.CZ_FIPS = $in.0.CZ_FIPS;
+	$out.0.CZ_NAME = $in.0.CZ_NAME;
+	$out.0.WFO = $in.0.WFO;
+	$out.0.BEGIN_DATE_TIME = $in.0.BEGIN_DATE_TIME;
+	$out.0.CZ_TIMEZONE = $in.0.CZ_TIMEZONE;
+	$out.0.END_DATE_TIME = $in.0.END_DATE_TIME;
+	$out.0.INJURIES_DIRECT = $in.0.INJURIES_DIRECT;
+	$out.0.INJURIES_INDIRECT = $in.0.INJURIES_INDIRECT;
+	$out.0.DEATHS_DIRECT = $in.0.DEATHS_DIRECT;
+	$out.0.DEATHS_INDIRECT = $in.0.DEATHS_INDIRECT;
+	$out.0.DAMAGE_PROPERTY = $in.0.DAMAGE_PROPERTY;
+	$out.0.DAMAGE_CROPS = $in.0.DAMAGE_CROPS;
+	$out.0.SOURCE = $in.0.SOURCE;
+	$out.0.MAGNITUDE = $in.0.MAGNITUDE;
+	$out.0.MAGNITUDE_TYPE = $in.0.MAGNITUDE_TYPE;
+	$out.0.FLOOD_CAUSE = $in.0.FLOOD_CAUSE;
+	$out.0.CATEGORY = $in.0.CATEGORY;
+	$out.0.TOR_F_SCALE = $in.0.TOR_F_SCALE;
+	$out.0.TOR_LENGTH = $in.0.TOR_LENGTH;
+	$out.0.TOR_WIDTH = $in.0.TOR_WIDTH;
+	$out.0.TOR_OTHER_WFO = $in.0.TOR_OTHER_WFO;
+	$out.0.TOR_OTHER_CZ_STATE = $in.0.TOR_OTHER_CZ_STATE;
+	$out.0.TOR_OTHER_CZ_FIPS = $in.0.TOR_OTHER_CZ_FIPS;
+	$out.0.TOR_OTHER_CZ_NAME = $in.0.TOR_OTHER_CZ_NAME;
+	$out.0.BEGIN_RANGE = $in.0.BEGIN_RANGE;
+	$out.0.BEGIN_AZIMUTH = $in.0.BEGIN_AZIMUTH;
+	$out.0.BEGIN_LOCATION = $in.0.BEGIN_LOCATION;
+	$out.0.END_RANGE = $in.0.END_RANGE;
+	$out.0.END_AZIMUTH = $in.0.END_AZIMUTH;
+	$out.0.END_LOCATION = $in.0.END_LOCATION;
+	$out.0.BEGIN_LAT = $in.0.BEGIN_LAT;
+	$out.0.BEGIN_LON = $in.0.BEGIN_LON;
+	$out.0.END_LAT = $in.0.END_LAT;
+	$out.0.END_LON = $in.0.END_LON;
+	$out.0.EPISODE_TITLE = $in.0.EPISODE_TITLE;
+	$out.0.EPISODE_NARRATIVE = $in.0.EPISODE_NARRATIVE;
+	$out.0.EVENT_NARRATIVE = $in.0.EVENT_NARRATIVE;
+	$out.0.LAST_MOD_DATE = $in.0.LAST_MOD_DATE;
+	$out.0.LAST_MOD_TIME = $in.0.LAST_MOD_TIME;
+	$out.0.LAST_CERT_DATE = $in.0.LAST_CERT_DATE;
+	$out.0.LAST_CERT_TIME = $in.0.LAST_CERT_TIME;
+	$out.0.LAST_MOD = $in.0.LAST_MOD;
+	$out.0.LAST_CERT = $in.0.LAST_CERT;
+	$out.0.ADDCORR_FLG = $in.0.ADDCORR_FLG;
+	$out.0.ADDCORR_DATE = $in.0.ADDCORR_DATE;
+	$out.0.State_County_Code = $in.0.State_County_Code;
+	
+	if($in.0.BEGIN_LAT != null && $in.0.BEGIN_LON != null) {
+	  $out.0.Geocode = $in.0.BEGIN_LAT + " " + $in.0.BEGIN_LON;	
+	}
+
+	return OK;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
 ]]></attr>
 </Node>
 <Node enabled="enabled" fileURL="${DATAIN_DIR}/incident_dates2.csv" guiHeight="67" guiName="Incident Dates Scrape" guiWidth="128" guiX="230" guiY="361" id="INCIDENT_DATES_SCRAPE" type="DATA_READER"/>
@@ -1188,7 +1356,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="917" guiY="565" id="TRASH2" type="TRASH"/>
+<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="902" guiY="201" id="TRASH2" type="TRASH"/>
 <Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="691" guiY="185" id="TRASH3" type="TRASH"/>
 <Node enabled="enabled" guiHeight="67" guiName="trim and lowercase" guiWidth="128" guiX="175" guiY="565" id="TRIM_AND_LOWERCASE" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
@@ -1237,15 +1405,16 @@ function integer transform() {
 ]]></attr>
 </Node>
 <Edge debugMode="false" fromNode="APPLICANT_ID_TABLE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 1 (slave)" metadata="Metadata7" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN0:1"/>
-<Edge debugMode="false" fromNode="COUNTY_FIXER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge10" inPort="Port 0 (in)" metadata="Metadata14" outPort="Port 0 (out)" toNode="EXT_SORT1:0"/>
+<Edge debugMode="false" fromNode="COUNTY_FIXER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge10" inPort="Port 0 (in)" metadata="Metadata14" outPort="Port 0 (out)" toNode="GEOLOCATE:0"/>
 <Edge debugMode="false" fromNode="EXT_HASH_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge8" inPort="Port 0 (driver)" metadata="Metadata9" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN1:0"/>
 <Edge debugMode="false" fromNode="EXT_HASH_JOIN1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge9" inPort="Port 0 (driver)" metadata="Metadata10" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN2:0"/>
 <Edge debugMode="false" fromNode="EXT_HASH_JOIN2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in)" metadata="Metadata12" outPort="Port 0 (out)" toNode="EXT_SORT0:0"/>
-<Edge debugMode="true" fromNode="EXT_MERGE_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge15" inPort="Port 0 (in)" metadata="Metadata17" outPort="Port 0 (out)" toNode="TRASH2:0"/>
+<Edge debugMode="true" fromNode="EXT_MERGE_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge15" inPort="Port 0 (in)" metadata="Metadata17" outPort="Port 0 (out)" toNode="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0:0"/>
 <Edge debugMode="true" fromNode="EXT_SORT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (driver)" metadata="Metadata12" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN0:0"/>
-<Edge debugMode="true" fromNode="EXT_SORT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 1 (slave)" metadata="Metadata14" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN0:1"/>
+<Edge debugMode="true" fromNode="EXT_SORT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 1 (slave)" metadata="Metadata19" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN0:1"/>
 <Edge debugMode="false" fromNode="FEMA_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 1 (slave)" metadata="Metadata2" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN1:1"/>
 <Edge debugMode="false" fromNode="FEMA_DATA_DETAIL:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (driver)" metadata="Metadata6" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN0:0"/>
+<Edge debugMode="true" fromNode="GEOLOCATE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata19" outPort="Port 0 (out)" toNode="EXT_SORT1:0"/>
 <Edge debugMode="false" fromNode="INCIDENT_DATES_SCRAPE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge4" inPort="Port 0 (in)" metadata="Metadata18" outPort="Port 0 (output)" toNode="REFORMAT0:0"/>
 <Edge debugMode="false" fromNode="PRICE_FIXER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 0 (in)" metadata="Metadata13" outPort="Port 0 (out)" toNode="COUNTY_FIXER:0"/>
 <Edge debugMode="false" fromNode="RAW_WEATHER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (output)" toNode="TRIM_AND_LOWERCASE:0"/>
