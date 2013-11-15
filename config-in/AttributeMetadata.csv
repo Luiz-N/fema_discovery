@@ -1,1 +1,2 @@
 AttributeKey,DisplayName,Type,Profile,Format
+Incident_Start_Date,Incident_Start_Date,mdex:datetime,Dimension,
