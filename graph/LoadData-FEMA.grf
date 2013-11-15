@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Fri Nov 15 11:03:34 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.274" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Fri Nov 15 11:23:35 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.278" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata8" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMADetailandApplicant" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
@@ -1129,7 +1129,7 @@ function integer transform() {
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="42" guiY="79" id="FEMA_DATA_DETAIL" numRecords="1000" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="42" guiY="79" id="FEMA_DATA_DETAIL" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -1406,7 +1406,7 @@ function integer transform() {
 <Edge debugMode="true" fromNode="EXT_SORT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 1 (slave)" metadata="Metadata19" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN0:1"/>
 <Edge debugMode="false" fromNode="FEMA_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 1 (slave)" metadata="Metadata2" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN1:1"/>
 <Edge debugMode="false" fromNode="FEMA_DATA_DETAIL:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (driver)" metadata="Metadata6" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN0:0"/>
-<Edge fromNode="GEOLOCATE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata19" outPort="Port 0 (out)" toNode="EXT_SORT1:0"/>
+<Edge debugMode="true" fromNode="GEOLOCATE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata19" outPort="Port 0 (out)" toNode="EXT_SORT1:0"/>
 <Edge debugMode="false" fromNode="INCIDENT_DATES_SCRAPE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge4" inPort="Port 0 (in)" metadata="Metadata18" outPort="Port 0 (output)" toNode="REFORMAT0:0"/>
 <Edge debugMode="false" fromNode="PRICE_FIXER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 0 (in)" metadata="Metadata13" outPort="Port 0 (out)" toNode="COUNTY_FIXER:0"/>
 <Edge debugMode="false" fromNode="RAW_WEATHER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (output)" toNode="TRIM_AND_LOWERCASE:0"/>
