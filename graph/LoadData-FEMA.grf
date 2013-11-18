@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Mon Nov 18 13:14:42 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.309" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Mon Nov 18 14:07:17 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.314" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata8" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMADetailandApplicant" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
@@ -224,7 +224,7 @@
 <Field label="EPISODE_ID" name="EPISODE_ID" type="long"/>
 <Field label="EVENT_ID" name="EVENT_ID" type="long"/>
 <Field label="STATE_FIPS" name="STATE_FIPS" type="long"/>
-<Field label="Year" name="YEAR" type="integer"/>
+<Field label="Year" name="YEAR" type="string"/>
 <Field label="MONTH_NAME" name="MONTH_NAME" type="string"/>
 <Field label="EVENT_TYPE" name="EVENT_TYPE" type="string"/>
 <Field label="CZ_TYPE" name="CZ_TYPE" type="string"/>
@@ -276,7 +276,7 @@
 <Field name="Geocode" type="string"/>
 <Field name="Identifier" type="string"/>
 <Field name="WEATHER_ID" type="integer"/>
-<Field name="Month" type="integer"/>
+<Field name="Month" type="string"/>
 <Field name="Day" type="integer"/>
 </Record>
 </Metadata>
@@ -1033,10 +1033,10 @@ function integer transform() {
 	$out.0.EVENT_ID = $in.1.EVENT_ID;
 	$out.0.STATE_FIPS = $in.1.STATE_FIPS;
 	if($in.1.YEAR != null) {
-	  $out.0.YEAR = long2integer($in.1.YEAR);
+	  $out.0.YEAR = num2str($in.1.YEAR);
 	}
 	else {
-	  $out.0.YEAR = date2num($in.0.Incident_Start_Date, year);
+	  $out.0.YEAR = num2str(date2num($in.0.Incident_Start_Date, year));
 	}
 	$out.0.MONTH_NAME = $in.1.MONTH_NAME;
 	$out.0.EVENT_TYPE = $in.1.EVENT_TYPE;
@@ -1101,12 +1101,17 @@ function integer transform() {
     }
     
     if($in.0.Incident_Start_Date != null) {
-      $out.0.Month = date2num($in.0.Incident_Start_Date, month);
+      $out.0.Month = num2str(date2num($in.0.Incident_Start_Date, month));
       $out.0.Day = date2num($in.0.Incident_Start_Date, day);
     }
     else {
-      $out.0.Month = date2num($in.1.BEGIN_DATE_TIME, month);
+      $out.0.Month = num2str(date2num($in.1.BEGIN_DATE_TIME, month));
       $out.0.Day = date2num($in.1.BEGIN_DATE_TIME, day);
+    }
+    
+    if(length($out.0.Month) == 1) {
+      string fixMonth = $out.0.Month;
+      $out.0.Month = '0' + fixMonth;
     }
     
 
