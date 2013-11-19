@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Mon Nov 18 14:07:17 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.314" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Mon Nov 18 20:10:00 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.319" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata8" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMADetailandApplicant" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
@@ -128,31 +128,36 @@
 <Field label="Federal Share Obligated" name="Federal_Share_Obligated" type="decimal"/>
 </Record>
 </Metadata>
-<Metadata id="Metadata10" previewAttachmentCharset="ISO-8859-1">
-<Record fieldDelimiter="|" name="FEMASumandDetail" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
-<Field label="Applicant_Name" name="Applicant_Name" type="string"/>
-<Field label="AddressLine1" name="AddressLine1" type="string"/>
-<Field label="AddressLine2" name="AddressLine2" type="string"/>
-<Field label="City_Name" name="City_Name" type="string"/>
-<Field label="Zip" name="Zip" type="string"/>
-<Field format="excel:0" label="Disaster Number" name="Disaster_Number" type="long"/>
-<Field format="excel:0" label="PW Number" name="PW_Number" type="long"/>
-<Field label="Application Title" name="Application_Title" type="string"/>
-<Field label="Applicant ID" name="Applicant_ID" type="string"/>
-<Field label="Damage Category Code" name="Damage_Category_Code" type="string"/>
-<Field label="Project Size" name="Project_Size" type="string"/>
-<Field label="County" name="County" type="string"/>
-<Field format="excel:0" label="County Code" name="County_Code" type="long"/>
-<Field label="State" name="State" type="string"/>
-<Field label="State Code" name="State_Code" type="string"/>
-<Field format="excel:00" label="State Number Code" name="State_Number_Code" type="long"/>
-<Field format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" type="number"/>
-<Field format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" type="number"/>
-<Field format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" type="number"/>
-<Field label="Declaration Date" name="Declaration_Date" type="date"/>
-<Field label="Incident Type" name="Incident_Type" type="string"/>
-<Field name="Disaster_Id" type="integer"/>
-<Field name="State_County_Code" type="long"/>
+<Metadata id="Metadata21" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="FEMASumandDetail" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="false" label="Applicant_Name" name="Applicant_Name" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="AddressLine1" name="AddressLine1" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="AddressLine2" name="AddressLine2" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="City_Name" name="City_Name" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Zip" name="Zip" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:0" label="Disaster Number" name="Disaster_Number" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" format="excel:0" label="PW Number" name="PW_Number" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="Application Title" name="Application_Title" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Applicant ID" name="Applicant_ID" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Damage Category Code" name="Damage_Category_Code" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Project Size" name="Project_Size" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="County" name="County" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:0" label="County Code" name="County_Code" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="State" name="State" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="State Code" name="State_Code" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:00" label="State Number Code" name="State_Number_Code" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="yyyy-MM-dd" label="Declaration Date" name="Declaration_Date" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" label="Incident Type" name="Incident_Type" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Disaster_Id" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="State_County_Code" nullable="true" shift="0" size="0" type="long"/>
+<Field format="yyyy-MM-dd" name="Incident_Start_Date" type="date"/>
+<Field name="Incident_End_Date" type="date"/>
+<Field name="Incident_Title" type="string"/>
+<Field name="Incident_Summary" type="string"/>
+<Field name="Geolocation" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata12" previewAttachmentCharset="ISO-8859-1">
@@ -184,6 +189,33 @@
 <Field name="Incident_End_Date" type="date"/>
 <Field name="Incident_Title" type="string"/>
 <Field name="Incident_Summary" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata10" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="FEMASumandDetail" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
+<Field label="Applicant_Name" name="Applicant_Name" type="string"/>
+<Field label="AddressLine1" name="AddressLine1" type="string"/>
+<Field label="AddressLine2" name="AddressLine2" type="string"/>
+<Field label="City_Name" name="City_Name" type="string"/>
+<Field label="Zip" name="Zip" type="string"/>
+<Field format="excel:0" label="Disaster Number" name="Disaster_Number" type="long"/>
+<Field format="excel:0" label="PW Number" name="PW_Number" type="long"/>
+<Field label="Application Title" name="Application_Title" type="string"/>
+<Field label="Applicant ID" name="Applicant_ID" type="string"/>
+<Field label="Damage Category Code" name="Damage_Category_Code" type="string"/>
+<Field label="Project Size" name="Project_Size" type="string"/>
+<Field label="County" name="County" type="string"/>
+<Field format="excel:0" label="County Code" name="County_Code" type="long"/>
+<Field label="State" name="State" type="string"/>
+<Field label="State Code" name="State_Code" type="string"/>
+<Field format="excel:00" label="State Number Code" name="State_Number_Code" type="long"/>
+<Field format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" type="number"/>
+<Field format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" type="number"/>
+<Field format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" type="number"/>
+<Field label="Declaration Date" name="Declaration_Date" type="date"/>
+<Field label="Incident Type" name="Incident_Type" type="string"/>
+<Field name="Disaster_Id" type="integer"/>
+<Field name="State_County_Code" type="long"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata17" previewAttachmentCharset="ISO-8859-1">
@@ -707,7 +739,18 @@
 <Field delimiter="|" name="State_County_Code" type="long"/>
 </Record>
 </Metadata>
+<Metadata id="Metadata20" previewAttachment="${DATAIN_DIR}/zip5.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip5.csv" name="zip5_csv" previewAttachment="${DATAIN_DIR}/zip5.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="both" quotedStrings="false" recordDelimiter="\n" skipSourceRows="0" type="delimited">
+<Field name="Zip" type="integer"/>
+<Field name="County" type="string"/>
+<Field name="State" type="string"/>
+<Field name="Lat" type="number"/>
+<Field name="Long" type="number"/>
+<Field eofAsDelimiter="false" name="Field6" type="string"/>
+</Record>
+</Metadata>
 <Property fileURL="workspace.prm" id="GraphParameter0"/>
+<LookupTable charset="ISO-8859-1" fileURL="${DATAIN_DIR}/zip5.csv" id="LookupTable0" initialSize="512" key="Zip" metadata="Metadata20" name="simpleLookup0" type="simpleLookup"/>
 <Note alignment="1" backgroundColorB="225" backgroundColorG="225" backgroundColorR="225" folded="false" height="735" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="Load Data" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="1040" x="12" y="-69">
 <attr name="text"><![CDATA[This phase loads data on sales transactions by joining on a set of dimension tables onto a fact table. Optional survey responses are then added.]]></attr>
 </Note>
@@ -934,7 +977,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="593" guiY="276" id="EXT_HASH_JOIN2" joinKey="$Disaster_Number=$Disaster_Number" type="EXT_HASH_JOIN">
+<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="551" guiY="145" id="EXT_HASH_JOIN2" joinKey="$Disaster_Number=$Disaster_Number" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -1200,6 +1243,63 @@ function integer transform() {
 </mapping>
 ]]></attr>
 </Node>
+<Node enabled="disabled" guiHeight="67" guiName="Geocode by Zip" guiWidth="128" guiX="722" guiY="147" id="GEOCODE_BY_ZIP" joinKey="Zip" lookupTable="LookupTable0" type="LOOKUP_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.Applicant_Name = $in.0.Applicant_Name;
+	$out.0.AddressLine1 = $in.0.AddressLine1;
+	$out.0.AddressLine2 = $in.0.AddressLine2;
+	$out.0.City_Name = $in.0.City_Name;
+	$out.0.Zip = $in.0.Zip;
+	$out.0.Disaster_Number = $in.0.Disaster_Number;
+	$out.0.PW_Number = $in.0.PW_Number;
+	$out.0.Application_Title = $in.0.Application_Title;
+	$out.0.Applicant_ID = $in.0.Applicant_ID;
+	$out.0.Damage_Category_Code = $in.0.Damage_Category_Code;
+	$out.0.Project_Size = $in.0.Project_Size;
+	$out.0.County = $in.0.County;
+	$out.0.County_Code = $in.0.County_Code;
+	$out.0.State = $in.0.State;
+	$out.0.State_Code = $in.0.State_Code;
+	$out.0.State_Number_Code = $in.0.State_Number_Code;
+	$out.0.Project_Amount = $in.0.Project_Amount;
+	$out.0.Federal_Share_Obligated = $in.0.Federal_Share_Obligated;
+	$out.0.Total_Obligated = $in.0.Total_Obligated;
+	$out.0.Declaration_Date = $in.0.Declaration_Date;
+	$out.0.Incident_Type = $in.0.Incident_Type;
+	$out.0.Disaster_Id = $in.0.Disaster_Id;
+	$out.0.State_County_Code = $in.0.State_County_Code;
+	$out.0.Incident_Start_Date = $in.0.Incident_Start_Date;
+	$out.0.Incident_End_Date = $in.0.Incident_End_Date;
+	$out.0.Incident_Title = $in.0.Incident_Title;
+	$out.0.Incident_Summary = $in.0.Incident_Summary;
+	
+	$out.0.Geolocation = $in.1.Lat + ' ' + $in.1.Long;
+
+	return OK;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
 <Node enabled="enabled" guiHeight="67" guiName="Geolocate" guiWidth="128" guiX="584" guiY="452" id="GEOLOCATE" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 integer incrementor = 0;
@@ -1387,8 +1487,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="902" guiY="201" id="TRASH2" type="TRASH"/>
-<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="691" guiY="185" id="TRASH3" type="TRASH"/>
+<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="911" guiY="191" id="TRASH2" type="TRASH"/>
 <Node enabled="enabled" guiHeight="67" guiName="trim and lowercase" guiWidth="128" guiX="175" guiY="565" id="TRIM_AND_LOWERCASE" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
