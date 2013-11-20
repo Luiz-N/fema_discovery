@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Wed Nov 20 09:36:48 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.357" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Wed Nov 20 09:53:00 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.358" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata8" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMADetailandApplicant" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
@@ -259,6 +259,50 @@
 <Field eofAsDelimiter="false" name="Month" nullable="true" shift="0" size="0" type="string"/>
 <Field eofAsDelimiter="false" name="Day" nullable="true" shift="0" size="0" type="integer"/>
 <Field eofAsDelimiter="false" format="yyyy-MM-dd" name="DateField" nullable="true" shift="0" size="0" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata27" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="FINALMERGE" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="false" label="Applicant_Name" name="Applicant_Name" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="City_Name" name="City_Name" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Zip" name="Zip" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:0" label="Disaster Number" name="Disaster_Number" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="Application Title" name="Application_Title" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Applicant ID" name="Applicant_ID" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Damage Category Code" name="Damage_Category_Code" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="County" name="County" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="State" name="State" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="yyyy-MM-dd" label="Declaration Date" name="Declaration_Date" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" label="Incident Type" name="Incident_Type" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Disaster_Id" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="State_County_Code" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" format="yyyy-MM-dd" name="Incident_Start_Date" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" format="yyyy-MM-dd" name="Incident_End_Date" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" name="Incident_Title" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Incident_Summary" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="EPISODE_ID" name="EPISODE_ID" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="EVENT_ID" name="EVENT_ID" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="STATE_FIPS" name="STATE_FIPS" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="Year" name="YEAR" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="EVENT_TYPE" name="EVENT_TYPE" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:m/d/yy h:mm" label="BEGIN_DATE_TIME" name="BEGIN_DATE_TIME" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" label="CZ_TIMEZONE" name="CZ_TIMEZONE" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="BEGIN_LOCATION" name="BEGIN_LOCATION" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="BEGIN_LAT" name="BEGIN_LAT" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="BEGIN_LON" name="BEGIN_LON" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="EPISODE_TITLE" name="EPISODE_TITLE" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="EPISODE_NARRATIVE" name="EPISODE_NARRATIVE" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="EVENT_NARRATIVE" name="EVENT_NARRATIVE" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" mdexType="mdex:geocode" name="Geocode" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Identifier" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="WEATHER_ID" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="Month" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Day" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" format="yyyy-MM-dd" name="DateField" nullable="true" shift="0" size="0" type="date"/>
+<Field name="Region" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata23" previewAttachmentCharset="ISO-8859-1">
@@ -1492,12 +1536,14 @@ function integer transform() {
 	    geocodeString = concat(rec.LAT, ' ', rec.LONG);
 
 	    $out.0.Geocode = geocodeString;
+	    $out.0.Region = rec.CENSUS_REGION;
 	  }
 	  else {
 	  	stateaveragegeocodes_csv rec = lookup(stateAvgLookup).get($out.0.State);
 	    if(rec != null) {
 	    	
 	      $out.0.Geocode = concat(rec.latitude, ' ', rec.longitude);
+	      $out.0.Region = rec.CENSUS_REGION;
 	    }
 	  }
 	    
@@ -1514,6 +1560,7 @@ function integer transform() {
 	  if(rec != null) {
 	    geocodeString = concat(rec.INTPTLAT, ' ', rec.INTPTLONG);
         $out.0.Geocode = geocodeString;
+        $out.0.Region = rec.CENSUS_REGION;
 	  }
 	  
 	  else {
@@ -1522,6 +1569,7 @@ function integer transform() {
 	    if(rec != null) {
 	    	
 	      $out.0.Geocode = concat(rec.latitude, ' ', rec.longitude);
+	      $out.0.Region = rec.CENSUS_REGION;
 	  
 	    }
 	  }	
@@ -1612,7 +1660,7 @@ function integer transform() {
 <Edge debugMode="false" fromNode="PRICE_FIXER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 0 (in)" metadata="Metadata13" outPort="Port 0 (out)" toNode="COUNTY_FIXER:0"/>
 <Edge debugMode="false" fromNode="RAW_WEATHER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (output)" toNode="TRIM_AND_LOWERCASE:0"/>
 <Edge fromNode="REFORMAT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge16" inPort="Port 1 (slave)" metadata="Metadata11" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN2:1"/>
-<Edge debugMode="true" fromNode="REFORMAT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge21" inPort="Port 0 (in)" metadata="Metadata17" outPort="Port 0 (out)" toNode="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0:0"/>
+<Edge debugMode="true" fromNode="REFORMAT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge21" inPort="Port 0 (in)" metadata="Metadata27" outPort="Port 0 (out)" toNode="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0:0"/>
 <Edge debugMode="false" fromNode="TRIM_AND_LOWERCASE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge6" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (out)" toNode="PRICE_FIXER:0"/>
 </Phase>
 </Graph>
