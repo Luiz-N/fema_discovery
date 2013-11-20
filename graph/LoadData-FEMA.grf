@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Mon Nov 18 09:01:24 CST 2013" modifiedBy="Luiz" name="LoadData" revision="1.290" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Wed Nov 20 08:56:06 CST 2013" modifiedBy="MichaelRhee" name="LoadData" revision="1.356" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata8" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="|" name="FEMADetailandApplicant" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
@@ -128,31 +128,36 @@
 <Field label="Federal Share Obligated" name="Federal_Share_Obligated" type="decimal"/>
 </Record>
 </Metadata>
-<Metadata id="Metadata10" previewAttachmentCharset="ISO-8859-1">
-<Record fieldDelimiter="|" name="FEMASumandDetail" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
-<Field label="Applicant_Name" name="Applicant_Name" type="string"/>
-<Field label="AddressLine1" name="AddressLine1" type="string"/>
-<Field label="AddressLine2" name="AddressLine2" type="string"/>
-<Field label="City_Name" name="City_Name" type="string"/>
-<Field label="Zip" name="Zip" type="string"/>
-<Field format="excel:0" label="Disaster Number" name="Disaster_Number" type="long"/>
-<Field format="excel:0" label="PW Number" name="PW_Number" type="long"/>
-<Field label="Application Title" name="Application_Title" type="string"/>
-<Field label="Applicant ID" name="Applicant_ID" type="string"/>
-<Field label="Damage Category Code" name="Damage_Category_Code" type="string"/>
-<Field label="Project Size" name="Project_Size" type="string"/>
-<Field label="County" name="County" type="string"/>
-<Field format="excel:0" label="County Code" name="County_Code" type="long"/>
-<Field label="State" name="State" type="string"/>
-<Field label="State Code" name="State_Code" type="string"/>
-<Field format="excel:00" label="State Number Code" name="State_Number_Code" type="long"/>
-<Field format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" type="number"/>
-<Field format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" type="number"/>
-<Field format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" type="number"/>
-<Field label="Declaration Date" name="Declaration_Date" type="date"/>
-<Field label="Incident Type" name="Incident_Type" type="string"/>
-<Field name="Disaster_Id" type="integer"/>
-<Field name="State_County_Code" type="long"/>
+<Metadata id="Metadata21" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="FEMASumandDetail" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="false" label="Applicant_Name" name="Applicant_Name" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="AddressLine1" name="AddressLine1" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="AddressLine2" name="AddressLine2" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="City_Name" name="City_Name" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Zip" name="Zip" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:0" label="Disaster Number" name="Disaster_Number" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" format="excel:0" label="PW Number" name="PW_Number" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="Application Title" name="Application_Title" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Applicant ID" name="Applicant_ID" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Damage Category Code" name="Damage_Category_Code" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Project Size" name="Project_Size" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="County" name="County" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:0" label="County Code" name="County_Code" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="State" name="State" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="State Code" name="State_Code" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:00" label="State Number Code" name="State_Number_Code" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="yyyy-MM-dd" label="Declaration Date" name="Declaration_Date" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" label="Incident Type" name="Incident_Type" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Disaster_Id" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="State_County_Code" nullable="true" shift="0" size="0" type="long"/>
+<Field format="yyyy-MM-dd" name="Incident_Start_Date" type="date"/>
+<Field name="Incident_End_Date" type="date"/>
+<Field name="Incident_Title" type="string"/>
+<Field name="Incident_Summary" type="string"/>
+<Field name="Geolocation" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata12" previewAttachmentCharset="ISO-8859-1">
@@ -186,24 +191,87 @@
 <Field name="Incident_Summary" type="string"/>
 </Record>
 </Metadata>
+<Metadata id="Metadata10" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="FEMASumandDetail" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
+<Field label="Applicant_Name" name="Applicant_Name" type="string"/>
+<Field label="AddressLine1" name="AddressLine1" type="string"/>
+<Field label="AddressLine2" name="AddressLine2" type="string"/>
+<Field label="City_Name" name="City_Name" type="string"/>
+<Field label="Zip" name="Zip" type="string"/>
+<Field format="excel:0" label="Disaster Number" name="Disaster_Number" type="long"/>
+<Field format="excel:0" label="PW Number" name="PW_Number" type="long"/>
+<Field label="Application Title" name="Application_Title" type="string"/>
+<Field label="Applicant ID" name="Applicant_ID" type="string"/>
+<Field label="Damage Category Code" name="Damage_Category_Code" type="string"/>
+<Field label="Project Size" name="Project_Size" type="string"/>
+<Field label="County" name="County" type="string"/>
+<Field format="excel:0" label="County Code" name="County_Code" type="long"/>
+<Field label="State" name="State" type="string"/>
+<Field label="State Code" name="State_Code" type="string"/>
+<Field format="excel:00" label="State Number Code" name="State_Number_Code" type="long"/>
+<Field format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" type="number"/>
+<Field format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" type="number"/>
+<Field format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" type="number"/>
+<Field label="Declaration Date" name="Declaration_Date" type="date"/>
+<Field label="Incident Type" name="Incident_Type" type="string"/>
+<Field name="Disaster_Id" type="integer"/>
+<Field name="State_County_Code" type="long"/>
+</Record>
+</Metadata>
 <Metadata id="Metadata17" previewAttachmentCharset="ISO-8859-1">
-<Record fieldDelimiter="|" name="FINALMERGE" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
+<Record fieldDelimiter="|" name="FINALMERGE" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" recordSize="-1" type="delimited">
 <Field eofAsDelimiter="false" label="Applicant_Name" name="Applicant_Name" nullable="true" shift="0" size="0" type="string"/>
-<Field eofAsDelimiter="false" label="AddressLine1" name="AddressLine1" nullable="true" shift="0" size="0" type="string"/>
-<Field eofAsDelimiter="false" label="AddressLine2" name="AddressLine2" nullable="true" shift="0" size="0" type="string"/>
 <Field eofAsDelimiter="false" label="City_Name" name="City_Name" nullable="true" shift="0" size="0" type="string"/>
 <Field eofAsDelimiter="false" label="Zip" name="Zip" nullable="true" shift="0" size="0" type="string"/>
 <Field eofAsDelimiter="false" format="excel:0" label="Disaster Number" name="Disaster_Number" nullable="true" shift="0" size="0" type="long"/>
-<Field eofAsDelimiter="false" format="excel:0" label="PW Number" name="PW_Number" nullable="true" shift="0" size="0" type="long"/>
 <Field eofAsDelimiter="false" label="Application Title" name="Application_Title" nullable="true" shift="0" size="0" type="string"/>
 <Field eofAsDelimiter="false" label="Applicant ID" name="Applicant_ID" nullable="true" shift="0" size="0" type="string"/>
 <Field eofAsDelimiter="false" label="Damage Category Code" name="Damage_Category_Code" nullable="true" shift="0" size="0" type="string"/>
-<Field eofAsDelimiter="false" label="Project Size" name="Project_Size" nullable="true" shift="0" size="0" type="string"/>
 <Field eofAsDelimiter="false" label="County" name="County" nullable="true" shift="0" size="0" type="string"/>
-<Field eofAsDelimiter="false" format="excel:0" label="County Code" name="County_Code" nullable="true" shift="0" size="0" type="long"/>
 <Field eofAsDelimiter="false" label="State" name="State" nullable="true" shift="0" size="0" type="string"/>
-<Field eofAsDelimiter="false" label="State Code" name="State_Code" nullable="true" shift="0" size="0" type="string"/>
-<Field eofAsDelimiter="false" format="excel:00" label="State Number Code" name="State_Number_Code" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" nullable="true" shift="0" size="0" type="number"/>
+<Field eofAsDelimiter="false" format="yyyy-MM-dd" label="Declaration Date" name="Declaration_Date" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" label="Incident Type" name="Incident_Type" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Disaster_Id" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="State_County_Code" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" format="yyyy-MM-dd" name="Incident_Start_Date" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" format="yyyy-MM-dd" name="Incident_End_Date" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" name="Incident_Title" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Incident_Summary" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="EPISODE_ID" name="EPISODE_ID" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="EVENT_ID" name="EVENT_ID" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="STATE_FIPS" name="STATE_FIPS" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="Year" name="YEAR" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="EVENT_TYPE" name="EVENT_TYPE" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:m/d/yy h:mm" label="BEGIN_DATE_TIME" name="BEGIN_DATE_TIME" nullable="true" shift="0" size="0" type="date"/>
+<Field eofAsDelimiter="false" label="CZ_TIMEZONE" name="CZ_TIMEZONE" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="BEGIN_LOCATION" name="BEGIN_LOCATION" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="BEGIN_LAT" name="BEGIN_LAT" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="BEGIN_LON" name="BEGIN_LON" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="EPISODE_TITLE" name="EPISODE_TITLE" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="EPISODE_NARRATIVE" name="EPISODE_NARRATIVE" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="EVENT_NARRATIVE" name="EVENT_NARRATIVE" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" mdexType="mdex:geocode" name="Geocode" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Identifier" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="WEATHER_ID" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" name="Month" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" name="Day" nullable="true" shift="0" size="0" type="integer"/>
+<Field eofAsDelimiter="false" format="yyyy-MM-dd" name="DateField" nullable="true" shift="0" size="0" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata23" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="FINALMERGE2_THESQL" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
+<Field eofAsDelimiter="false" label="Applicant_Name" name="Applicant_Name" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="City_Name" name="City_Name" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Zip" name="Zip" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" format="excel:0" label="Disaster Number" name="Disaster_Number" nullable="true" shift="0" size="0" type="long"/>
+<Field eofAsDelimiter="false" label="Application Title" name="Application_Title" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Applicant ID" name="Applicant_ID" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="Damage Category Code" name="Damage_Category_Code" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="County" name="County" nullable="true" shift="0" size="0" type="string"/>
+<Field eofAsDelimiter="false" label="State" name="State" nullable="true" shift="0" size="0" type="string"/>
 <Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Project Amount" name="Project_Amount" nullable="true" shift="0" size="0" type="number"/>
 <Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" nullable="true" shift="0" size="0" type="number"/>
 <Field eofAsDelimiter="false" format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" nullable="true" shift="0" size="0" type="number"/>
@@ -215,67 +283,25 @@
 <Field name="Incident_End_Date" type="date"/>
 <Field name="Incident_Title" type="string"/>
 <Field name="Incident_Summary" type="string"/>
-<Field label="BEGIN_YEARMONTH" name="BEGIN_YEARMONTH" type="long"/>
-<Field label="BEGIN_DAY" name="BEGIN_DAY" type="long"/>
-<Field label="BEGIN_TIME" name="BEGIN_TIME" type="long"/>
-<Field label="END_YEARMONTH" name="END_YEARMONTH" type="long"/>
-<Field label="END_DAY" name="END_DAY" type="long"/>
-<Field label="END_TIME" name="END_TIME" type="long"/>
 <Field label="EPISODE_ID" name="EPISODE_ID" type="long"/>
 <Field label="EVENT_ID" name="EVENT_ID" type="long"/>
-<Field label="STATE" name="STATE" type="string"/>
 <Field label="STATE_FIPS" name="STATE_FIPS" type="long"/>
-<Field label="YEAR" name="YEAR" type="long"/>
-<Field label="MONTH_NAME" name="MONTH_NAME" type="string"/>
+<Field label="Year" name="YEAR" type="string"/>
 <Field label="EVENT_TYPE" name="EVENT_TYPE" type="string"/>
-<Field label="CZ_TYPE" name="CZ_TYPE" type="string"/>
-<Field label="CZ_FIPS" name="CZ_FIPS" type="long"/>
-<Field label="CZ_NAME" name="CZ_NAME" type="string"/>
-<Field label="WFO" name="WFO" type="string"/>
 <Field format="excel:m/d/yy h:mm" label="BEGIN_DATE_TIME" name="BEGIN_DATE_TIME" type="date"/>
 <Field label="CZ_TIMEZONE" name="CZ_TIMEZONE" type="string"/>
-<Field format="excel:m/d/yy h:mm" label="END_DATE_TIME" name="END_DATE_TIME" type="date"/>
-<Field label="INJURIES_DIRECT" name="INJURIES_DIRECT" type="long"/>
-<Field label="INJURIES_INDIRECT" name="INJURIES_INDIRECT" type="long"/>
-<Field label="DEATHS_DIRECT" name="DEATHS_DIRECT" type="long"/>
-<Field label="DEATHS_INDIRECT" name="DEATHS_INDIRECT" type="long"/>
-<Field label="DAMAGE_PROPERTY" name="DAMAGE_PROPERTY" type="decimal"/>
-<Field label="DAMAGE_CROPS" name="DAMAGE_CROPS" type="decimal"/>
-<Field label="SOURCE" name="SOURCE" type="string"/>
-<Field label="MAGNITUDE" name="MAGNITUDE" type="string"/>
-<Field label="MAGNITUDE_TYPE" name="MAGNITUDE_TYPE" type="string"/>
-<Field label="FLOOD_CAUSE" name="FLOOD_CAUSE" type="string"/>
-<Field label="CATEGORY" name="CATEGORY" type="string"/>
-<Field label="TOR_F_SCALE" name="TOR_F_SCALE" type="string"/>
-<Field label="TOR_LENGTH" name="TOR_LENGTH" type="string"/>
-<Field label="TOR_WIDTH" name="TOR_WIDTH" type="string"/>
-<Field label="TOR_OTHER_WFO" name="TOR_OTHER_WFO" type="string"/>
-<Field label="TOR_OTHER_CZ_STATE" name="TOR_OTHER_CZ_STATE" type="string"/>
-<Field label="TOR_OTHER_CZ_FIPS" name="TOR_OTHER_CZ_FIPS" type="string"/>
-<Field label="TOR_OTHER_CZ_NAME" name="TOR_OTHER_CZ_NAME" type="string"/>
-<Field label="BEGIN_RANGE" name="BEGIN_RANGE" type="string"/>
-<Field label="BEGIN_AZIMUTH" name="BEGIN_AZIMUTH" type="string"/>
 <Field label="BEGIN_LOCATION" name="BEGIN_LOCATION" type="string"/>
-<Field label="END_RANGE" name="END_RANGE" type="string"/>
-<Field label="END_AZIMUTH" name="END_AZIMUTH" type="string"/>
-<Field label="END_LOCATION" name="END_LOCATION" type="string"/>
 <Field label="BEGIN_LAT" name="BEGIN_LAT" type="string"/>
 <Field label="BEGIN_LON" name="BEGIN_LON" type="string"/>
-<Field label="END_LAT" name="END_LAT" type="string"/>
-<Field label="END_LON" name="END_LON" type="string"/>
 <Field label="EPISODE_TITLE" name="EPISODE_TITLE" type="string"/>
 <Field label="EPISODE_NARRATIVE" name="EPISODE_NARRATIVE" type="string"/>
 <Field label="EVENT_NARRATIVE" name="EVENT_NARRATIVE" type="string"/>
-<Field label="LAST_MOD_DATE" name="LAST_MOD_DATE" type="string"/>
-<Field label="LAST_MOD_TIME" name="LAST_MOD_TIME" type="string"/>
-<Field label="LAST_CERT_DATE" name="LAST_CERT_DATE" type="string"/>
-<Field label="LAST_CERT_TIME" name="LAST_CERT_TIME" type="string"/>
-<Field label="LAST_MOD" name="LAST_MOD" type="string"/>
-<Field label="LAST_CERT" name="LAST_CERT" type="string"/>
-<Field label="ADDCORR_FLG" name="ADDCORR_FLG" type="string"/>
-<Field label="ADDCORR_DATE" name="ADDCORR_DATE" type="string"/>
 <Field name="Geocode" type="string"/>
 <Field name="Identifier" type="string"/>
+<Field name="WEATHER_ID" type="integer"/>
+<Field name="Month" type="string"/>
+<Field name="Day" type="integer"/>
+<Field name="DateField" type="date"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata18" previewAttachment="${DATAIN_DIR}/incident_dates.csv" previewAttachmentCharset="ISO-8859-1">
@@ -318,6 +344,32 @@
 <Field format="excel:\$#,##0.00" label="Federal Share Obligated" name="Federal_Share_Obligated" type="number"/>
 <Field format="excel:\$#,##0.00" label="Total Obligated" name="Total_Obligated" type="number"/>
 <Field name="Disaster_Id" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata25" previewAttachment="${DATAIN_DIR}/stateaveragegeocodes.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="stateaveragegeocodes.csv" name="stateaveragegeocodes_csv" previewAttachment="${DATAIN_DIR}/stateaveragegeocodes.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="both" quotedStrings="false" recordDelimiter="\r\n" skipSourceRows="1" type="delimited">
+<Field name="state" type="string"/>
+<Field name="CENSUS_REGION" type="string"/>
+<Field name="STATE_NAME" type="string"/>
+<Field name="latitude" type="string"/>
+<Field eofAsDelimiter="false" name="longitude" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata22" previewAttachment="${DATAIN_DIR}/statecountyregiongeocodes.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="statecountyregiongeocodes.csv" name="statecountymeta" previewAttachment="${DATAIN_DIR}/statecountyregiongeocodes.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="both" quotedStrings="false" recordDelimiter="\r\n" skipSourceRows="1" type="delimited">
+<Field name="STATE_NAME" type="string"/>
+<Field name="CENSUS_REGION" type="string"/>
+<Field name="USPS" type="string"/>
+<Field name="GEOID" type="string"/>
+<Field name="ANSICODE" type="string"/>
+<Field name="NAME" type="string"/>
+<Field name="ALAND" type="string"/>
+<Field name="AWATER" type="string"/>
+<Field name="ALAND_SQMI" type="string"/>
+<Field name="AWATER_SQMI" type="string"/>
+<Field name="INTPTLAT" type="string"/>
+<Field name="INTPTLONG" type="string"/>
+<Field eofAsDelimiter="false" name="STATE_COUNTY" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata14" previewAttachmentCharset="ISO-8859-1">
@@ -383,6 +435,7 @@
 <Field label="ADDCORR_DATE" name="ADDCORR_DATE" type="string"/>
 <Field delimiter="|" name="State_County_Code" type="long"/>
 <Field mdexType="mdex:geocode" name="Geocode" type="string"/>
+<Field name="County" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata19" previewAttachmentCharset="ISO-8859-1">
@@ -447,8 +500,8 @@
 <Field label="ADDCORR_FLG" name="ADDCORR_FLG" type="string"/>
 <Field label="ADDCORR_DATE" name="ADDCORR_DATE" type="string"/>
 <Field delimiter="|" name="State_County_Code" type="long"/>
-<Field name="Geocode" type="string"/>
 <Field name="WEATHER_ID" type="integer"/>
+<Field name="County" type="string"/>
 </Record>
 </Metadata>
 <Metadata id="Metadata13" previewAttachmentCharset="ISO-8859-1">
@@ -705,14 +758,51 @@
 <Field delimiter="|" name="State_County_Code" type="long"/>
 </Record>
 </Metadata>
+<Metadata id="Metadata20" previewAttachment="${DATAIN_DIR}/zip5.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip5.csv" name="zip5_csv" previewAttachment="${DATAIN_DIR}/zip5.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="both" quotedStrings="false" recordDelimiter="\n" skipSourceRows="0" type="delimited">
+<Field name="Zip" type="integer"/>
+<Field name="County" type="string"/>
+<Field name="State" type="string"/>
+<Field name="Lat" type="number"/>
+<Field name="Long" type="number"/>
+<Field eofAsDelimiter="false" name="Field6" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata24" previewAttachment="${DATAIN_DIR}/zipgeocodes.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zipgeocodes.csv" name="zipgeocodes_csv" previewAttachment="${DATAIN_DIR}/zipgeocodes.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="both" quotedStrings="false" recordDelimiter="\r\n" skipSourceRows="1" type="delimited">
+<Field name="ZIP" type="string"/>
+<Field name="CENSUS_REGION" type="string"/>
+<Field name="STATE_NAME" type="string"/>
+<Field name="CITY_NAME" type="string"/>
+<Field name="STATE" type="string"/>
+<Field name="LAT" type="string"/>
+<Field name="LONG" type="string"/>
+<Field eofAsDelimiter="false" name="COUNTY" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata26">
+<Record fieldDelimiter="|" name="zipgeocodes_xls" recordDelimiter="\r\n" type="delimited">
+<Field format="excel:00000" label="ZIP" name="ZIP" type="string"/>
+<Field label="CENSUS_REGION" name="CENSUS_REGION" type="string"/>
+<Field label="STATE_NAME" name="STATE_NAME" type="string"/>
+<Field label="CITY_NAME" name="CITY_NAME" type="string"/>
+<Field label="STATE" name="STATE" type="string"/>
+<Field label="LAT" name="LAT" type="string"/>
+<Field label="LONG" name="LONG" type="string"/>
+<Field label="COUNTY" name="COUNTY" type="string"/>
+</Record>
+</Metadata>
 <Property fileURL="workspace.prm" id="GraphParameter0"/>
-<Note alignment="1" backgroundColorB="225" backgroundColorG="225" backgroundColorR="225" folded="false" height="735" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="Load Data" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="1040" x="12" y="-69">
+<LookupTable charset="ISO-8859-1" fileURL="${DATAIN_DIR}/stateaveragegeocodes.csv" id="LookupTable2" initialSize="512" key="STATE_NAME" metadata="Metadata25" name="stateAvgLookup" type="simpleLookup"/>
+<LookupTable fileURL="${DATAIN_DIR}/statecountyregiongeocodes.csv" id="LookupTable1" initialSize="512" key="STATE_COUNTY" metadata="Metadata22" name="stateCountyLookup" type="simpleLookup"/>
+<LookupTable fileURL="${DATAIN_DIR}/zipgeocodes.csv" id="LookupTable0" initialSize="512" key="ZIP" metadata="Metadata24" name="zipcodelookupFINAL" type="simpleLookup"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="225" backgroundColorR="225" folded="false" height="735" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="Load Data" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="1040" x="85" y="-45">
 <attr name="text"><![CDATA[This phase loads data on sales transactions by joining on a set of dimension tables onto a fact table. Optional survey responses are then added.]]></attr>
 </Note>
 <Dictionary/>
 </Global>
 <Phase number="0">
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="ApplicantIdTable" guiWidth="128" guiX="42" guiY="167" id="APPLICANT_ID_TABLE" sheet="Applicants" type="SPREADSHEET_READER">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="ApplicantIdTable" guiWidth="128" guiX="115" guiY="191" id="APPLICANT_ID_TABLE" sheet="Applicants" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -738,7 +828,7 @@
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="67" guiName="county_fixer" guiWidth="128" guiX="424" guiY="579" id="COUNTY_FIXER" type="REFORMAT">
+<Node enabled="enabled" guiHeight="67" guiName="county_fixer" guiWidth="128" guiX="430" guiY="589" id="COUNTY_FIXER" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -758,7 +848,7 @@ function integer transform() {
 	$out.0.EVENT_TYPE = $in.0.EVENT_TYPE;
 	$out.0.CZ_TYPE = $in.0.CZ_TYPE;
 	$out.0.CZ_FIPS = $in.0.CZ_FIPS;
-	$out.0.CZ_NAME = $in.0.CZ_NAME;
+	$out.0.County = $in.0.CZ_NAME;
 	$out.0.WFO = $in.0.WFO;
 	$out.0.BEGIN_DATE_TIME = $in.0.BEGIN_DATE_TIME;
 	$out.0.CZ_TIMEZONE = $in.0.CZ_TIMEZONE;
@@ -831,8 +921,8 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="disabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="914" guiY="557" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Identifier" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
-<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="215" guiY="130" id="EXT_HASH_JOIN0" joinKey="$Applicant_ID=$Applicant_ID" type="EXT_HASH_JOIN">
+<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="enabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="964" guiY="597" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Identifier" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
+<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="288" guiY="154" id="EXT_HASH_JOIN0" joinKey="$Applicant_ID=$Applicant_ID" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 integer incrementor = 0;
 
@@ -881,7 +971,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="373" guiY="236" id="EXT_HASH_JOIN1" joinKey="$Disaster_Number=$Disaster_Number" type="EXT_HASH_JOIN">
+<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="369" guiY="287" id="EXT_HASH_JOIN1" joinKey="$Disaster_Number=$Disaster_Number" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -932,7 +1022,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="593" guiY="276" id="EXT_HASH_JOIN2" joinKey="$Disaster_Number=$Disaster_Number" type="EXT_HASH_JOIN">
+<Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="524" guiY="189" id="EXT_HASH_JOIN2" joinKey="$Disaster_Number=$Disaster_Number" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -940,7 +1030,9 @@ function integer transform() {
 	$out.0.Applicant_Name = $in.0.Applicant_Name;
 	$out.0.AddressLine1 = $in.0.AddressLine1;
 	$out.0.AddressLine2 = $in.0.AddressLine2;
-	$out.0.City_Name = $in.0.City_Name;
+	if($in.0.City_Name != null) {
+	  $out.0.City_Name = upperCase($in.0.City_Name);
+	}
 	$out.0.Zip = $in.0.Zip;
 	$out.0.Disaster_Number = $in.0.Disaster_Number;
 	$out.0.PW_Number = $in.0.PW_Number;
@@ -948,7 +1040,7 @@ function integer transform() {
 	$out.0.Applicant_ID = $in.0.Applicant_ID;
 	$out.0.Damage_Category_Code = $in.0.Damage_Category_Code;
 	$out.0.Project_Size = $in.0.Project_Size;
-	$out.0.County = $in.0.County;
+	$out.0.County = upperCase($in.0.County);
 	$out.0.County_Code = $in.0.County_Code;
 	$out.0.State = $in.0.State;
 	$out.0.State_Code = $in.0.State_Code;
@@ -987,27 +1079,26 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="72" guiName="ExtMergeJoin" guiWidth="128" guiX="841" guiY="438" id="EXT_MERGE_JOIN0" joinKey="$Incident_Start_Date(a);$State_Number_Code(a)#$BEGIN_DATE_TIME(a);$STATE_FIPS(a);" joinType="fullOuter" type="EXT_MERGE_JOIN">
+<Node enabled="enabled" guiHeight="72" guiName="ExtMergeJoin" guiWidth="128" guiX="776" guiY="418" id="EXT_MERGE_JOIN0" joinKey="$Incident_Start_Date(a);$State_Number_Code(a)#$BEGIN_DATE_TIME(a);$STATE_FIPS(a);" joinType="fullOuter" type="EXT_MERGE_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
 function integer transform() {
 	$out.0.Applicant_Name = $in.0.Applicant_Name;
-	$out.0.AddressLine1 = $in.0.AddressLine1;
-	$out.0.AddressLine2 = $in.0.AddressLine2;
 	$out.0.City_Name = $in.0.City_Name;
 	$out.0.Zip = $in.0.Zip;
 	$out.0.Disaster_Number = $in.0.Disaster_Number;
-	$out.0.PW_Number = $in.0.PW_Number;
 	$out.0.Application_Title = $in.0.Application_Title;
 	$out.0.Applicant_ID = $in.0.Applicant_ID;
 	$out.0.Damage_Category_Code = $in.0.Damage_Category_Code;
-	$out.0.Project_Size = $in.0.Project_Size;
-	$out.0.County = $in.0.County;
-	$out.0.County_Code = $in.0.County_Code;
-	$out.0.State = $in.0.State;
-	$out.0.State_Code = $in.0.State_Code;
-	$out.0.State_Number_Code = $in.0.State_Number_Code;
+	if($in.0.State != null) {
+	  $out.0.State = upperCase($in.0.State);
+	}
+	else {
+	  if($in.1.STATE != null) {
+	    $out.0.State = upperCase($in.1.STATE);
+	  }
+	}
 	$out.0.Project_Amount = $in.0.Project_Amount;
 	$out.0.Federal_Share_Obligated = $in.0.Federal_Share_Obligated;
 	$out.0.Total_Obligated = $in.0.Total_Obligated;
@@ -1015,69 +1106,28 @@ function integer transform() {
 	$out.0.Incident_Type = $in.0.Incident_Type;
 	$out.0.Disaster_Id = $in.0.Disaster_Id;
 	$out.0.State_County_Code = $in.0.State_County_Code;
-	$out.0.Incident_Start_Date = $in.0.Incident_Start_Date;
+
 	$out.0.Incident_End_Date = $in.0.Incident_End_Date;
 	$out.0.Incident_Title = $in.0.Incident_Title;
 	$out.0.Incident_Summary = $in.0.Incident_Summary;
-	$out.0.BEGIN_YEARMONTH = $in.1.BEGIN_YEARMONTH;
-	$out.0.BEGIN_DAY = $in.1.BEGIN_DAY;
-	$out.0.BEGIN_TIME = $in.1.BEGIN_TIME;
-	$out.0.END_YEARMONTH = $in.1.END_YEARMONTH;
-	$out.0.END_DAY = $in.1.END_DAY;
-	$out.0.END_TIME = $in.1.END_TIME;
 	$out.0.EPISODE_ID = $in.1.EPISODE_ID;
 	$out.0.EVENT_ID = $in.1.EVENT_ID;
 	$out.0.STATE_FIPS = $in.1.STATE_FIPS;
-	$out.0.YEAR = $in.1.YEAR;
-	$out.0.MONTH_NAME = $in.1.MONTH_NAME;
+	if($in.1.YEAR != null) {
+	  $out.0.YEAR = num2str($in.1.YEAR);
+	}
+	else {
+	  $out.0.YEAR = num2str(date2num($in.0.Incident_Start_Date, year));
+	}
 	$out.0.EVENT_TYPE = $in.1.EVENT_TYPE;
-	$out.0.CZ_TYPE = $in.1.CZ_TYPE;
-	$out.0.CZ_FIPS = $in.1.CZ_FIPS;
-	$out.0.CZ_NAME = $in.1.CZ_NAME;
-	$out.0.WFO = $in.1.WFO;
-	$out.0.BEGIN_DATE_TIME = $in.1.BEGIN_DATE_TIME;
 	$out.0.CZ_TIMEZONE = $in.1.CZ_TIMEZONE;
-	$out.0.END_DATE_TIME = $in.1.END_DATE_TIME;
-	$out.0.INJURIES_DIRECT = $in.1.INJURIES_DIRECT;
-	$out.0.INJURIES_INDIRECT = $in.1.INJURIES_INDIRECT;
-	$out.0.DEATHS_DIRECT = $in.1.DEATHS_DIRECT;
-	$out.0.DEATHS_INDIRECT = $in.1.DEATHS_INDIRECT;
-	$out.0.DAMAGE_PROPERTY = $in.1.DAMAGE_PROPERTY;
-	$out.0.DAMAGE_CROPS = $in.1.DAMAGE_CROPS;
-	$out.0.SOURCE = $in.1.SOURCE;
-	$out.0.MAGNITUDE = $in.1.MAGNITUDE;
-	$out.0.MAGNITUDE_TYPE = $in.1.MAGNITUDE_TYPE;
-	$out.0.FLOOD_CAUSE = $in.1.FLOOD_CAUSE;
-	$out.0.CATEGORY = $in.1.CATEGORY;
-	$out.0.TOR_F_SCALE = $in.1.TOR_F_SCALE;
-	$out.0.TOR_LENGTH = $in.1.TOR_LENGTH;
-	$out.0.TOR_WIDTH = $in.1.TOR_WIDTH;
-	$out.0.TOR_OTHER_WFO = $in.1.TOR_OTHER_WFO;
-	$out.0.TOR_OTHER_CZ_STATE = $in.1.TOR_OTHER_CZ_STATE;
-	$out.0.TOR_OTHER_CZ_FIPS = $in.1.TOR_OTHER_CZ_FIPS;
-	$out.0.TOR_OTHER_CZ_NAME = $in.1.TOR_OTHER_CZ_NAME;
-	$out.0.BEGIN_RANGE = $in.1.BEGIN_RANGE;
-	$out.0.BEGIN_AZIMUTH = $in.1.BEGIN_AZIMUTH;
 	$out.0.BEGIN_LOCATION = $in.1.BEGIN_LOCATION;
-	$out.0.END_RANGE = $in.1.END_RANGE;
-	$out.0.END_AZIMUTH = $in.1.END_AZIMUTH;
-	$out.0.END_LOCATION = $in.1.END_LOCATION;
 	$out.0.BEGIN_LAT = $in.1.BEGIN_LAT;
 	$out.0.BEGIN_LON = $in.1.BEGIN_LON;
-	$out.0.END_LAT = $in.1.END_LAT;
-	$out.0.END_LON = $in.1.END_LON;
 	$out.0.EPISODE_TITLE = $in.1.EPISODE_TITLE;
 	$out.0.EPISODE_NARRATIVE = $in.1.EPISODE_NARRATIVE;
 	$out.0.EVENT_NARRATIVE = $in.1.EVENT_NARRATIVE;
-	$out.0.LAST_MOD_DATE = $in.1.LAST_MOD_DATE;
-	$out.0.LAST_MOD_TIME = $in.1.LAST_MOD_TIME;
-	$out.0.LAST_CERT_DATE = $in.1.LAST_CERT_DATE;
-	$out.0.LAST_CERT_TIME = $in.1.LAST_CERT_TIME;
-	$out.0.LAST_MOD = $in.1.LAST_MOD;
-	$out.0.LAST_CERT = $in.1.LAST_CERT;
-	$out.0.ADDCORR_FLG = $in.1.ADDCORR_FLG;
-	$out.0.ADDCORR_DATE = $in.1.ADDCORR_DATE;
-	$out.0.Geocode = $in.1.Geocode;
+	$out.0.WEATHER_ID = $in.1.WEATHER_ID;
 	
 	if($in.0.Disaster_Id != null) {
 	  $out.0.Identifier = num2str($in.0.Disaster_Id);
@@ -1085,6 +1135,29 @@ function integer transform() {
 	else {
 	  $out.0.Identifier = 'E' + num2str($in.1.EVENT_ID);
 	}
+
+    //if($out.0.State == null) {
+    //  $out.0.State = upperCase($in.1.STATE);
+    //}
+    
+    if($in.0.Incident_Start_Date != null) {
+      $out.0.Month = num2str(date2num($in.0.Incident_Start_Date, month));
+      $out.0.Day = date2num($in.0.Incident_Start_Date, day);
+      $out.0.County = $in.0.County;
+      $out.0.DateField = $in.0.Incident_Start_Date;
+    }
+    else {
+      $out.0.Month = num2str(date2num($in.1.BEGIN_DATE_TIME, month));
+      $out.0.Day = date2num($in.1.BEGIN_DATE_TIME, day);
+      $out.0.County = $in.1.County;
+      $out.0.DateField = $in.1.BEGIN_DATE_TIME;
+    }
+    
+    if(length($out.0.Month) == 1) {
+      string fixMonth = $out.0.Month;
+      $out.0.Month = '0' + fixMonth;
+    }
+    
 
 	return OK;
 }
@@ -1108,9 +1181,9 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="67" guiName="ExtSort" guiWidth="128" guiX="760" guiY="323" id="EXT_SORT0" sortKey="Incident_Start_Date(a);State_County_Code(a)" type="EXT_SORT"/>
-<Node enabled="enabled" guiHeight="67" guiName="ExtSort" guiWidth="128" guiX="746" guiY="579" id="EXT_SORT1" sortKey="BEGIN_DATE_TIME(a);State_County_Code(a)" type="EXT_SORT"/>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data" guiWidth="128" guiX="121" guiY="265" id="FEMA_DATA" sheet="PA Applicant Summary,PA Applicant Summary(1),PA Applicant Summary(2)" skipRecords="0" type="SPREADSHEET_READER">
+<Node enabled="enabled" guiHeight="67" guiName="ExtSort" guiWidth="128" guiX="630" guiY="313" id="EXT_SORT0" sortKey="Incident_Start_Date(a);State_County_Code(a)" type="EXT_SORT"/>
+<Node enabled="enabled" guiHeight="67" guiName="ExtSort" guiWidth="128" guiX="668" guiY="589" id="EXT_SORT1" sortKey="BEGIN_DATE_TIME(a);State_County_Code(a)" type="EXT_SORT"/>
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceSubGrantee__Oct2013.xls" guiHeight="67" guiName="FEMA Data" guiWidth="128" guiX="194" guiY="289" id="FEMA_DATA" sheet="PA Applicant Summary,PA Applicant Summary(1),PA Applicant Summary(2)" skipRecords="0" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -1138,7 +1211,7 @@ function integer transform() {
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="42" guiY="79" id="FEMA_DATA_DETAIL" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="115" guiY="103" id="FEMA_DATA_DETAIL" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -1171,7 +1244,7 @@ function integer transform() {
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="67" guiName="Geolocate" guiWidth="128" guiX="584" guiY="452" id="GEOLOCATE" type="REFORMAT">
+<Node enabled="enabled" guiHeight="67" guiName="Geolocate" guiWidth="128" guiX="557" guiY="460" id="GEOLOCATE" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 integer incrementor = 0;
 // Transforms input record into output record.
@@ -1191,7 +1264,7 @@ function integer transform() {
 	$out.0.EVENT_TYPE = $in.0.EVENT_TYPE;
 	$out.0.CZ_TYPE = $in.0.CZ_TYPE;
 	$out.0.CZ_FIPS = $in.0.CZ_FIPS;
-	$out.0.CZ_NAME = $in.0.CZ_NAME;
+	$out.0.County = $in.0.County;
 	$out.0.WFO = $in.0.WFO;
 	$out.0.BEGIN_DATE_TIME = $in.0.BEGIN_DATE_TIME;
 	$out.0.CZ_TIMEZONE = $in.0.CZ_TIMEZONE;
@@ -1238,9 +1311,9 @@ function integer transform() {
 	$out.0.State_County_Code = $in.0.State_County_Code;
 	$out.0.WEATHER_ID = incrementor++;
 	
-	if($in.0.BEGIN_LAT != null && $in.0.BEGIN_LON != null) {
-	  $out.0.Geocode = $in.0.BEGIN_LAT + " " + $in.0.BEGIN_LON;	
-	}
+	//if($in.0.BEGIN_LAT != null && $in.0.BEGIN_LON != null) {
+	//  $out.0.Geocode = $in.0.BEGIN_LAT + " " + $in.0.BEGIN_LON;	
+	//}
 
 	return OK;
 }
@@ -1264,8 +1337,8 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/incident_dates2.csv" guiHeight="67" guiName="Incident Dates Scrape" guiWidth="128" guiX="230" guiY="361" id="INCIDENT_DATES_SCRAPE" type="DATA_READER"/>
-<Node enabled="enabled" guiHeight="67" guiName="price_fixer" guiWidth="128" guiX="330" guiY="465" id="PRICE_FIXER" type="REFORMAT">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/incident_dates2.csv" guiHeight="67" guiName="Incident Dates Scrape" guiWidth="128" guiX="236" guiY="385" id="INCIDENT_DATES_SCRAPE" type="DATA_READER"/>
+<Node enabled="enabled" guiHeight="67" guiName="price_fixer" guiWidth="128" guiX="342" guiY="477" id="PRICE_FIXER" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -1324,8 +1397,8 @@ function decimal convert(string raw_string){
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/stormdata_full.xlsx" guiHeight="67" guiName="raw_weather" guiWidth="128" guiX="30" guiY="465" id="RAW_WEATHER" numRecords="1000" type="SPREADSHEET_READER"/>
-<Node enabled="enabled" guiHeight="67" guiName="Reformat" guiWidth="128" guiX="430" guiY="361" id="REFORMAT0" type="REFORMAT">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/stormdata_full.xlsx" guiHeight="67" guiName="raw_weather" guiWidth="128" guiX="103" guiY="489" id="RAW_WEATHER" skipRecords="100000" type="SPREADSHEET_READER"/>
+<Node enabled="enabled" guiHeight="67" guiName="Reformat" guiWidth="128" guiX="439" guiY="385" id="REFORMAT0" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -1358,9 +1431,127 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="902" guiY="201" id="TRASH2" type="TRASH"/>
-<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="691" guiY="185" id="TRASH3" type="TRASH"/>
-<Node enabled="enabled" guiHeight="67" guiName="trim and lowercase" guiWidth="128" guiX="175" guiY="565" id="TRIM_AND_LOWERCASE" type="REFORMAT">
+<Node enabled="enabled" guiHeight="67" guiName="Reformat" guiWidth="128" guiX="957" guiY="332" id="REFORMAT1" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.Applicant_Name = $in.0.Applicant_Name;
+	$out.0.City_Name = $in.0.City_Name;
+	$out.0.Zip = $in.0.Zip;
+	$out.0.Disaster_Number = $in.0.Disaster_Number;
+	$out.0.Application_Title = $in.0.Application_Title;
+	$out.0.Applicant_ID = $in.0.Applicant_ID;
+	$out.0.Damage_Category_Code = $in.0.Damage_Category_Code;
+	$out.0.County = $in.0.County;
+	$out.0.State = $in.0.State;
+	$out.0.Project_Amount = $in.0.Project_Amount;
+	$out.0.Federal_Share_Obligated = $in.0.Federal_Share_Obligated;
+	$out.0.Total_Obligated = $in.0.Total_Obligated;
+	$out.0.Declaration_Date = $in.0.Declaration_Date;
+	$out.0.Incident_Type = $in.0.Incident_Type;
+	$out.0.Disaster_Id = $in.0.Disaster_Id;
+	$out.0.State_County_Code = $in.0.State_County_Code;
+	$out.0.Incident_Start_Date = $in.0.Incident_Start_Date;
+	$out.0.Incident_End_Date = $in.0.Incident_End_Date;
+	$out.0.Incident_Title = $in.0.Incident_Title;
+	$out.0.Incident_Summary = $in.0.Incident_Summary;
+	$out.0.EPISODE_ID = $in.0.EPISODE_ID;
+	$out.0.EVENT_ID = $in.0.EVENT_ID;
+	$out.0.STATE_FIPS = $in.0.STATE_FIPS;
+	$out.0.YEAR = $in.0.YEAR;
+	$out.0.EVENT_TYPE = $in.0.EVENT_TYPE;
+	$out.0.BEGIN_DATE_TIME = $in.0.BEGIN_DATE_TIME;
+	$out.0.CZ_TIMEZONE = $in.0.CZ_TIMEZONE;
+	$out.0.BEGIN_LOCATION = $in.0.BEGIN_LOCATION;
+	$out.0.BEGIN_LAT = $in.0.BEGIN_LAT;
+	$out.0.BEGIN_LON = $in.0.BEGIN_LON;
+	$out.0.EPISODE_TITLE = $in.0.EPISODE_TITLE;
+	$out.0.EPISODE_NARRATIVE = $in.0.EPISODE_NARRATIVE;
+	$out.0.EVENT_NARRATIVE = $in.0.EVENT_NARRATIVE;
+	$out.0.Geocode = $in.0.Geocode;
+	$out.0.Identifier = $in.0.Identifier;
+	$out.0.WEATHER_ID = $in.0.WEATHER_ID;
+	$out.0.Month = $in.0.Month;
+	$out.0.Day = $in.0.Day;
+	$out.0.DateField = $in.0.DateField;
+	
+	// FEMA Data lookup
+	
+	if($out.0.Zip != null) {
+	  string zipCode = $out.0.Zip;
+	  string geocodeString;
+	  
+	  if(indexOf(zipCode,'-') > 0) {
+	    zipCode = (split(zipCode,'-'))[0];
+
+	  }
+	  
+	  zipgeocodes_csv rec = lookup(zipcodelookupFINAL).get(zipCode);
+	  if(rec != null) {
+	    geocodeString = concat(rec.LAT, ' ', rec.LONG);
+
+	    $out.0.Geocode = geocodeString;
+	  }
+	  else {
+	  	stateaveragegeocodes_csv rec = lookup(stateAvgLookup).get($out.0.State);
+	    if(rec != null) {
+	    	
+	      $out.0.Geocode = concat(rec.latitude, ' ', rec.longitude);
+	    }
+	  }
+	    
+	}
+	
+	// Weather Data lookup
+	
+	else {
+	  string stateCountyString = $out.0.State + $out.0.County;
+	  string geocodeString;
+	  	  
+	  stateCountyString = replace(stateCountyString,' ','');
+	  statecountymeta rec = lookup(stateCountyLookup).get(stateCountyString);
+	  if(rec != null) {
+	    geocodeString = concat(rec.INTPTLAT, ' ', rec.INTPTLONG);
+        $out.0.Geocode = geocodeString;
+	  }
+	  
+	  else {
+	  
+	    stateaveragegeocodes_csv rec = lookup(stateAvgLookup).get($out.0.State);
+	    if(rec != null) {
+	    	
+	      $out.0.Geocode = concat(rec.latitude, ' ', rec.longitude);
+	  
+	    }
+	  }	
+	}
+
+	return OK;
+}
+
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="980" guiY="171" id="TRASH2" type="TRASH"/>
+<Node enabled="enabled" guiHeight="67" guiName="trim and lowercase" guiWidth="128" guiX="248" guiY="589" id="TRIM_AND_LOWERCASE" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
 // Transforms input record into output record.
@@ -1411,7 +1602,7 @@ function integer transform() {
 <Edge debugMode="false" fromNode="EXT_HASH_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge8" inPort="Port 0 (driver)" metadata="Metadata9" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN1:0"/>
 <Edge debugMode="false" fromNode="EXT_HASH_JOIN1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge9" inPort="Port 0 (driver)" metadata="Metadata10" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN2:0"/>
 <Edge debugMode="false" fromNode="EXT_HASH_JOIN2:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in)" metadata="Metadata12" outPort="Port 0 (out)" toNode="EXT_SORT0:0"/>
-<Edge debugMode="false" fromNode="EXT_MERGE_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge15" inPort="Port 0 (in)" metadata="Metadata17" outPort="Port 0 (out)" toNode="TRASH2:0"/>
+<Edge debugMode="true" fromNode="EXT_MERGE_JOIN0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge15" inPort="Port 0 (in)" metadata="Metadata17" outPort="Port 0 (out)" toNode="REFORMAT1:0"/>
 <Edge debugMode="false" fromNode="EXT_SORT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (driver)" metadata="Metadata12" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN0:0"/>
 <Edge debugMode="false" fromNode="EXT_SORT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 1 (slave)" metadata="Metadata19" outPort="Port 0 (out)" toNode="EXT_MERGE_JOIN0:1"/>
 <Edge debugMode="false" fromNode="FEMA_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 1 (slave)" metadata="Metadata2" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN1:1"/>
@@ -1421,6 +1612,7 @@ function integer transform() {
 <Edge debugMode="false" fromNode="PRICE_FIXER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 0 (in)" metadata="Metadata13" outPort="Port 0 (out)" toNode="COUNTY_FIXER:0"/>
 <Edge debugMode="false" fromNode="RAW_WEATHER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (output)" toNode="TRIM_AND_LOWERCASE:0"/>
 <Edge fromNode="REFORMAT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge16" inPort="Port 1 (slave)" metadata="Metadata11" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN2:1"/>
+<Edge debugMode="true" fromNode="REFORMAT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge21" inPort="Port 0 (in)" metadata="Metadata17" outPort="Port 0 (out)" toNode="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0:0"/>
 <Edge debugMode="false" fromNode="TRIM_AND_LOWERCASE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge6" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (out)" toNode="PRICE_FIXER:0"/>
 </Phase>
 </Graph>

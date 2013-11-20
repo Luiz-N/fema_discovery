@@ -1,1 +1,5 @@
 AttributeKey,DisplayName,Type,Profile,Format
+Disaster_Id,Disaster_Id,mdex:int,Metric,No_Comma_Int
+WEATHER_ID,Weather_Id,mdex:int,Metric,No_Comma_Int
+YEAR,Year,mdex:string,Dimension,Default
+Month,Month,mdex:string,Dimension,Default
