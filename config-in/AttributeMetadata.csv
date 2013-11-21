@@ -5,13 +5,13 @@ YEAR,Year,mdex:string,Dimension,Default
 Month,Month,mdex:string,Dimension,Default
 Applicant_Name,Applicant,mdex:string,Dimension,Default
 City_Name,City,mdex:string,Dimension,Default
-Zip,Zip,mdex:string,Dimension,Default
+Zip,Applicant_Zip,mdex:string,Dimension,Default
 Disaster_Number,Disaster_Number,mdex:long,Metric,No_Comma_Int
 Application_Title,Application_Title,mdex:string,Dimension,Default
 Applicant_ID,Applicant_ID,mdex:string,Dimension,Default
 Damage_Category_Code,Damage_Category_Code,mdex:string,Dimension,Default
 County,County,mdex:string,Dimension,Default
-State,State,mdex:string,Dimension,Default
+State,Disaster_State,mdex:string,Dimension,Default
 Project_Amount,Project_Amount,mdex:double,Metric,Default
 EPISODE_NARRATIVE,Episode_Narrative,mdex:string,Text,Default
 EVENT_NARRATIVE,Event_Narrative,mdex:string,Text,Default

@@ -1,6 +1,219 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="dbrock" created="Wed Jul 24 16:06:04 CDT 2013" guiVersion="3.3.0.P" id="1374700252649" licenseCode="CLP1DENDEC48373255BY" licenseType="Commercial" modified="Wed Jul 24 16:06:04 CDT 2013" modifiedBy="dbrock" name="Test" revision="1.0" showComponentDetails="true">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="dbrock" created="Wed Jul 24 16:06:04 CDT 2013" guiVersion="3.3.0.P" id="1374700252649" licenseType="Commercial" modified="Thu Nov 21 09:42:31 CST 2013" modifiedBy="Luiz" name="Test" revision="1.7" showComponentDetails="true">
 <Global>
+<Metadata id="Metadata1" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="CopyOf_stormdata_full_stormdata_full" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
+<Field label="BEGIN_YEARMONTH" name="BEGIN_YEARMONTH" type="long"/>
+<Field label="BEGIN_DAY" name="BEGIN_DAY" type="long"/>
+<Field label="BEGIN_TIME" name="BEGIN_TIME" type="long"/>
+<Field label="END_YEARMONTH" name="END_YEARMONTH" type="long"/>
+<Field label="END_DAY" name="END_DAY" type="long"/>
+<Field label="END_TIME" name="END_TIME" type="long"/>
+<Field label="EPISODE_ID" name="EPISODE_ID" type="long"/>
+<Field label="EVENT_ID" name="EVENT_ID" type="long"/>
+<Field label="STATE" name="STATE" type="string"/>
+<Field label="STATE_FIPS" name="STATE_FIPS" type="long"/>
+<Field label="YEAR" name="YEAR" type="long"/>
+<Field label="MONTH_NAME" name="MONTH_NAME" type="string"/>
+<Field label="EVENT_TYPE" name="EVENT_TYPE" type="string"/>
+<Field label="CZ_TYPE" name="CZ_TYPE" type="string"/>
+<Field label="CZ_FIPS" name="CZ_FIPS" type="long"/>
+<Field label="CZ_NAME" name="CZ_NAME" type="string"/>
+<Field label="WFO" name="WFO" type="string"/>
+<Field format="excel:m/d/yy h:mm" label="BEGIN_DATE_TIME" name="BEGIN_DATE_TIME" type="date"/>
+<Field label="CZ_TIMEZONE" name="CZ_TIMEZONE" type="string"/>
+<Field format="excel:m/d/yy h:mm" label="END_DATE_TIME" name="END_DATE_TIME" type="date"/>
+<Field label="INJURIES_DIRECT" name="INJURIES_DIRECT" type="long"/>
+<Field label="INJURIES_INDIRECT" name="INJURIES_INDIRECT" type="long"/>
+<Field label="DEATHS_DIRECT" name="DEATHS_DIRECT" type="long"/>
+<Field label="DEATHS_INDIRECT" name="DEATHS_INDIRECT" type="long"/>
+<Field label="DAMAGE_PROPERTY" name="DAMAGE_PROPERTY" type="string"/>
+<Field label="DAMAGE_CROPS" name="DAMAGE_CROPS" type="string"/>
+<Field label="SOURCE" name="SOURCE" type="string"/>
+<Field label="MAGNITUDE" name="MAGNITUDE" type="string"/>
+<Field label="MAGNITUDE_TYPE" name="MAGNITUDE_TYPE" type="string"/>
+<Field label="FLOOD_CAUSE" name="FLOOD_CAUSE" type="string"/>
+<Field label="CATEGORY" name="CATEGORY" type="string"/>
+<Field label="TOR_F_SCALE" name="TOR_F_SCALE" type="string"/>
+<Field label="TOR_LENGTH" name="TOR_LENGTH" type="string"/>
+<Field label="TOR_WIDTH" name="TOR_WIDTH" type="string"/>
+<Field label="TOR_OTHER_WFO" name="TOR_OTHER_WFO" type="string"/>
+<Field label="TOR_OTHER_CZ_STATE" name="TOR_OTHER_CZ_STATE" type="string"/>
+<Field label="TOR_OTHER_CZ_FIPS" name="TOR_OTHER_CZ_FIPS" type="string"/>
+<Field label="TOR_OTHER_CZ_NAME" name="TOR_OTHER_CZ_NAME" type="string"/>
+<Field label="BEGIN_RANGE" name="BEGIN_RANGE" type="string"/>
+<Field label="BEGIN_AZIMUTH" name="BEGIN_AZIMUTH" type="string"/>
+<Field label="BEGIN_LOCATION" name="BEGIN_LOCATION" type="string"/>
+<Field label="END_RANGE" name="END_RANGE" type="string"/>
+<Field label="END_AZIMUTH" name="END_AZIMUTH" type="string"/>
+<Field label="END_LOCATION" name="END_LOCATION" type="string"/>
+<Field label="BEGIN_LAT" name="BEGIN_LAT" type="string"/>
+<Field label="BEGIN_LON" name="BEGIN_LON" type="string"/>
+<Field label="END_LAT" name="END_LAT" type="string"/>
+<Field label="END_LON" name="END_LON" type="string"/>
+<Field label="EPISODE_TITLE" name="EPISODE_TITLE" type="string"/>
+<Field label="EPISODE_NARRATIVE" name="EPISODE_NARRATIVE" type="string"/>
+<Field label="EVENT_NARRATIVE" name="EVENT_NARRATIVE" type="string"/>
+<Field label="LAST_MOD_DATE" name="LAST_MOD_DATE" type="string"/>
+<Field label="LAST_MOD_TIME" name="LAST_MOD_TIME" type="string"/>
+<Field label="LAST_CERT_DATE" name="LAST_CERT_DATE" type="string"/>
+<Field label="LAST_CERT_TIME" name="LAST_CERT_TIME" type="string"/>
+<Field label="LAST_MOD" name="LAST_MOD" type="string"/>
+<Field label="LAST_CERT" name="LAST_CERT" type="string"/>
+<Field label="ADDCORR_FLG" name="ADDCORR_FLG" type="string"/>
+<Field label="ADDCORR_DATE" name="ADDCORR_DATE" type="string"/>
+<Field name="Summary" type="string"/>
+<Field name="EntitiesList" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata0">
+<Record fieldDelimiter="|" name="stormdata_full_stormdata_full" recordDelimiter="\r\n" type="delimited">
+<Field label="BEGIN_YEARMONTH" name="BEGIN_YEARMONTH" type="long"/>
+<Field label="BEGIN_DAY" name="BEGIN_DAY" type="long"/>
+<Field label="BEGIN_TIME" name="BEGIN_TIME" type="long"/>
+<Field label="END_YEARMONTH" name="END_YEARMONTH" type="long"/>
+<Field label="END_DAY" name="END_DAY" type="long"/>
+<Field label="END_TIME" name="END_TIME" type="long"/>
+<Field label="EPISODE_ID" name="EPISODE_ID" type="long"/>
+<Field label="EVENT_ID" name="EVENT_ID" type="long"/>
+<Field label="STATE" name="STATE" type="string"/>
+<Field label="STATE_FIPS" name="STATE_FIPS" type="long"/>
+<Field label="YEAR" name="YEAR" type="long"/>
+<Field label="MONTH_NAME" name="MONTH_NAME" type="string"/>
+<Field label="EVENT_TYPE" name="EVENT_TYPE" type="string"/>
+<Field label="CZ_TYPE" name="CZ_TYPE" type="string"/>
+<Field label="CZ_FIPS" name="CZ_FIPS" type="long"/>
+<Field label="CZ_NAME" name="CZ_NAME" type="string"/>
+<Field label="WFO" name="WFO" type="string"/>
+<Field format="excel:m/d/yy h:mm" label="BEGIN_DATE_TIME" name="BEGIN_DATE_TIME" type="date"/>
+<Field label="CZ_TIMEZONE" name="CZ_TIMEZONE" type="string"/>
+<Field format="excel:m/d/yy h:mm" label="END_DATE_TIME" name="END_DATE_TIME" type="date"/>
+<Field label="INJURIES_DIRECT" name="INJURIES_DIRECT" type="long"/>
+<Field label="INJURIES_INDIRECT" name="INJURIES_INDIRECT" type="long"/>
+<Field label="DEATHS_DIRECT" name="DEATHS_DIRECT" type="long"/>
+<Field label="DEATHS_INDIRECT" name="DEATHS_INDIRECT" type="long"/>
+<Field label="DAMAGE_PROPERTY" name="DAMAGE_PROPERTY" type="string"/>
+<Field label="DAMAGE_CROPS" name="DAMAGE_CROPS" type="string"/>
+<Field label="SOURCE" name="SOURCE" type="string"/>
+<Field label="MAGNITUDE" name="MAGNITUDE" type="string"/>
+<Field label="MAGNITUDE_TYPE" name="MAGNITUDE_TYPE" type="string"/>
+<Field label="FLOOD_CAUSE" name="FLOOD_CAUSE" type="string"/>
+<Field label="CATEGORY" name="CATEGORY" type="string"/>
+<Field label="TOR_F_SCALE" name="TOR_F_SCALE" type="string"/>
+<Field label="TOR_LENGTH" name="TOR_LENGTH" type="string"/>
+<Field label="TOR_WIDTH" name="TOR_WIDTH" type="string"/>
+<Field label="TOR_OTHER_WFO" name="TOR_OTHER_WFO" type="string"/>
+<Field label="TOR_OTHER_CZ_STATE" name="TOR_OTHER_CZ_STATE" type="string"/>
+<Field label="TOR_OTHER_CZ_FIPS" name="TOR_OTHER_CZ_FIPS" type="string"/>
+<Field label="TOR_OTHER_CZ_NAME" name="TOR_OTHER_CZ_NAME" type="string"/>
+<Field label="BEGIN_RANGE" name="BEGIN_RANGE" type="string"/>
+<Field label="BEGIN_AZIMUTH" name="BEGIN_AZIMUTH" type="string"/>
+<Field label="BEGIN_LOCATION" name="BEGIN_LOCATION" type="string"/>
+<Field label="END_RANGE" name="END_RANGE" type="string"/>
+<Field label="END_AZIMUTH" name="END_AZIMUTH" type="string"/>
+<Field label="END_LOCATION" name="END_LOCATION" type="string"/>
+<Field label="BEGIN_LAT" name="BEGIN_LAT" type="string"/>
+<Field label="BEGIN_LON" name="BEGIN_LON" type="string"/>
+<Field label="END_LAT" name="END_LAT" type="string"/>
+<Field label="END_LON" name="END_LON" type="string"/>
+<Field label="EPISODE_TITLE" name="EPISODE_TITLE" type="string"/>
+<Field label="EPISODE_NARRATIVE" name="EPISODE_NARRATIVE" type="string"/>
+<Field label="EVENT_NARRATIVE" name="EVENT_NARRATIVE" type="string"/>
+<Field label="LAST_MOD_DATE" name="LAST_MOD_DATE" type="string"/>
+<Field label="LAST_MOD_TIME" name="LAST_MOD_TIME" type="string"/>
+<Field label="LAST_CERT_DATE" name="LAST_CERT_DATE" type="string"/>
+<Field label="LAST_CERT_TIME" name="LAST_CERT_TIME" type="string"/>
+<Field label="LAST_MOD" name="LAST_MOD" type="string"/>
+<Field label="LAST_CERT" name="LAST_CERT" type="string"/>
+<Field label="ADDCORR_FLG" name="ADDCORR_FLG" type="string"/>
+<Field label="ADDCORR_DATE" name="ADDCORR_DATE" type="string"/>
+</Record>
+</Metadata>
 <Property fileURL="workspace.prm" id="GraphParameter0"/>
 <Dictionary/>
 </Global>
+<Phase number="0">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/stormdata_full.xlsx" guiHeight="93" guiName="SpreadsheetDataReader" guiWidth="166" guiX="228" guiY="110" id="SPREADSHEET_READER0" numRecords="10000" sheet="stormdata_full" type="SPREADSHEET_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+    <globalAttributes>
+        <orientation>VERTICAL</orientation>
+        <step>1</step>
+        <writeHeader>true</writeHeader>
+    </globalAttributes>
+    <defaultSkip>1</defaultSkip>
+    <headerGroups>
+        <headerGroup skip="1">
+            <autoMappingType>NAME</autoMappingType>
+            <headerRanges>
+                <headerRange begin="A1"/>
+                <headerRange begin="B1"/>
+                <headerRange begin="C1"/>
+                <headerRange begin="D1"/>
+                <headerRange begin="E1"/>
+                <headerRange begin="F1"/>
+                <headerRange begin="G1"/>
+                <headerRange begin="H1"/>
+                <headerRange begin="I1"/>
+                <headerRange begin="J1"/>
+                <headerRange begin="K1"/>
+                <headerRange begin="L1"/>
+                <headerRange begin="M1"/>
+                <headerRange begin="N1"/>
+                <headerRange begin="O1"/>
+                <headerRange begin="P1"/>
+                <headerRange begin="Q1"/>
+                <headerRange begin="R1"/>
+                <headerRange begin="S1"/>
+                <headerRange begin="T1"/>
+                <headerRange begin="U1"/>
+                <headerRange begin="V1"/>
+                <headerRange begin="W1"/>
+                <headerRange begin="X1"/>
+                <headerRange begin="Y1"/>
+                <headerRange begin="Z1"/>
+                <headerRange begin="AA1"/>
+                <headerRange begin="AB1"/>
+                <headerRange begin="AC1"/>
+                <headerRange begin="AD1"/>
+                <headerRange begin="AE1"/>
+                <headerRange begin="AF1"/>
+                <headerRange begin="AG1"/>
+                <headerRange begin="AH1"/>
+                <headerRange begin="AI1"/>
+                <headerRange begin="AJ1"/>
+                <headerRange begin="AK1"/>
+                <headerRange begin="AL1"/>
+                <headerRange begin="AM1"/>
+                <headerRange begin="AN1"/>
+                <headerRange begin="AO1"/>
+                <headerRange begin="AP1"/>
+                <headerRange begin="AQ1"/>
+                <headerRange begin="AR1"/>
+                <headerRange begin="AS1"/>
+                <headerRange begin="AT1"/>
+                <headerRange begin="AU1"/>
+                <headerRange begin="AV1"/>
+                <headerRange begin="AW1"/>
+                <headerRange begin="AX1"/>
+                <headerRange begin="AY1"/>
+                <headerRange begin="AZ1"/>
+                <headerRange begin="BA1"/>
+                <headerRange begin="BB1"/>
+                <headerRange begin="BC1"/>
+                <headerRange begin="BD1"/>
+                <headerRange begin="BE1"/>
+                <headerRange begin="BF1"/>
+                <headerRange begin="BG1"/>
+                <headerRange end="inf1" begin="BH1"/>
+            </headerRanges>
+        </headerGroup>
+    </headerGroups>
+</mapping>
+]]></attr>
+</Node>
+<Node enabled="enabled" guiHeight="67" guiName="Text Enrichment" guiWidth="128" guiX="543" guiY="151" id="TEXT_ENRICHMENT0" inputField="EPISODE_NARRATIVE" multiAssignDelimiter="" propertiesFile="salience.properties" te.salience.data.path="C:/Lexalytics/data" te.salience.license.path="${PROJECT}/license.v5" te.salience.text-threshold="80" threads="1" type="TEXT_ENRICHMENT"/>
+<Node enabled="enabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="892" guiY="129" id="TRASH0" type="TRASH"/>
+<Edge fromNode="SPREADSHEET_READER0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (output)" toNode="TEXT_ENRICHMENT0:0"/>
+<Edge fromNode="TEXT_ENRICHMENT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="TRASH0:0"/>
+</Phase>
 </Graph>
