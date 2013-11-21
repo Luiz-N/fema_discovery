@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Thu Nov 21 12:04:11 CST 2013" modifiedBy="Luiz" name="LoadData" revision="1.395" showComponentDetails="false">
+<?xml version="1.0" encoding="UTF-8"?><Graph author="otraub" created="Mon Jun 06 09:40:20 EDT 2011" guiVersion="3.3.0.P" id="1307392988263" licenseType="Commercial" modified="Thu Nov 21 14:18:07 CST 2013" modifiedBy="Luiz" name="LoadData" revision="1.397" showComponentDetails="false">
 <Global>
 <Metadata id="Metadata28" previewAttachmentCharset="ISO-8859-1">
 <Record fieldDelimiter="," name="EnrichedText" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\r\n" type="delimited">
@@ -1017,7 +1017,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="enabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="981" guiY="115" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Identifier" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
+<Node dataDomainName="${DATA_DOMAIN_NAME}" enabled="disabled" endecaServerContextRoot="${ENDECA_SERVER_CONTEXT}" endecaServerHost="${ENDECA_SERVER_HOST}" endecaServerPort="${ENDECA_SERVER_PORT}" guiHeight="67" guiName="Bulk Add/Replace Records" guiWidth="128" guiX="981" guiY="115" id="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0" multiAssignDelimiter="${MULTIASSIGN_DELIMITER}" specProperty="Identifier" sslEnabled="false" type="ENDECA_BULK_ADD_OR_REPLACE_RECORDS"/>
 <Node enabled="enabled" guiHeight="72" guiName="ExtHashJoin" guiWidth="128" guiX="288" guiY="154" id="EXT_HASH_JOIN0" joinKey="$Applicant_ID=$Applicant_ID" type="EXT_HASH_JOIN">
 <attr name="transform"><![CDATA[//#CTL2
 integer incrementor = 0;
@@ -1312,7 +1312,7 @@ function integer transform() {
 </mapping>
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="115" guiY="103" id="FEMA_DATA_DETAIL" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/FEMAPublicAssistanceFundedProjectsDetail_Oct2013.xls" guiHeight="67" guiName="FEMA Data Detail" guiWidth="128" guiX="115" guiY="103" id="FEMA_DATA_DETAIL" numRecords="10000" sheet="PW,PW(1),PW(2),PW(3),PW(4),PW(5),PW(6),PW(7),PW(8)" type="SPREADSHEET_READER">
 <attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mapping>
     <globalAttributes>
@@ -1498,7 +1498,7 @@ function decimal convert(string raw_string){
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="enabled" fileURL="${DATAIN_DIR}/stormdata_full.xlsx" guiHeight="67" guiName="raw_weather" guiWidth="128" guiX="103" guiY="489" id="RAW_WEATHER" skipRecords="100000" type="SPREADSHEET_READER"/>
+<Node enabled="enabled" fileURL="${DATAIN_DIR}/stormdata_full.xlsx" guiHeight="67" guiName="raw_weather" guiWidth="128" guiX="103" guiY="489" id="RAW_WEATHER" numRecords="300000" skipRecords="100000" type="SPREADSHEET_READER"/>
 <Node enabled="enabled" guiHeight="67" guiName="Reformat" guiWidth="128" guiX="439" guiY="385" id="REFORMAT0" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
@@ -1575,6 +1575,11 @@ function integer transform() {
 	$out.0.DateField = $in.0.DateField;
 	$out.0.Applicant_State = $in.0.Applicant_State;
 	// FEMA Data lookup
+
+	stateaveragegeocodes_csv rec = lookup(stateAvgLookup).get($out.0.State);
+	if(rec != null){
+		$out.0.Region = rec.CENSUS_REGION;
+	}
 	
 	if($out.0.Zip != null) {
 	  string zipCode = $out.0.Zip;
@@ -1590,14 +1595,14 @@ function integer transform() {
 	    geocodeString = concat(rec.LAT, ' ', rec.LONG);
 
 	    $out.0.Geocode = geocodeString;
-	    $out.0.Region = rec.CENSUS_REGION;
+	  //  $out.0.Region = rec.CENSUS_REGION;
 	  }
 	  else {
 	  	stateaveragegeocodes_csv rec = lookup(stateAvgLookup).get($out.0.Applicant_State);
 	    if(rec != null) {
-	    	
+	    	 
 	      $out.0.Geocode = concat(rec.latitude, ' ', rec.longitude);
-	      $out.0.Region = rec.CENSUS_REGION;
+	     // $out.0.Region = rec.CENSUS_REGION;
 	    }
 	  }
 	    
@@ -1652,7 +1657,7 @@ function integer transform() {
 // function string getMessage() {}
 ]]></attr>
 </Node>
-<Node enabled="disabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="928" guiY="22" id="TRASH2" type="TRASH"/>
+<Node enabled="enabled" guiHeight="67" guiName="Trash" guiWidth="128" guiX="928" guiY="22" id="TRASH2" type="TRASH"/>
 <Node enabled="enabled" guiHeight="67" guiName="trim and lowercase" guiWidth="128" guiX="248" guiY="589" id="TRIM_AND_LOWERCASE" type="REFORMAT">
 <attr name="transform"><![CDATA[//#CTL2
 
@@ -1714,7 +1719,7 @@ function integer transform() {
 <Edge debugMode="false" fromNode="PRICE_FIXER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 0 (in)" metadata="Metadata13" outPort="Port 0 (out)" toNode="COUNTY_FIXER:0"/>
 <Edge debugMode="false" fromNode="RAW_WEATHER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (output)" toNode="TRIM_AND_LOWERCASE:0"/>
 <Edge fromNode="REFORMAT0:0" guiBendpoints="" guiRouter="Manhattan" id="Edge16" inPort="Port 1 (slave)" metadata="Metadata11" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN2:1"/>
-<Edge debugMode="true" fromNode="REFORMAT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge20" inPort="Port 0 (in)" metadata="Metadata27" outPort="Port 0 (out)" toNode="ENDECA_BULK_ADD_OR_REPLACE_RECORDS0:0"/>
+<Edge debugMode="true" fromNode="REFORMAT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge20" inPort="Port 0 (in)" metadata="Metadata27" outPort="Port 0 (out)" toNode="TRASH2:0"/>
 <Edge debugMode="false" fromNode="TRIM_AND_LOWERCASE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge6" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (out)" toNode="PRICE_FIXER:0"/>
 </Phase>
 </Graph>
